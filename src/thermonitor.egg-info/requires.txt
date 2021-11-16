@@ -1,0 +1,5 @@
+Pillow>=8.4
+plotext>=4
+pyfiglet>=0.8.post1
+requests>=2.26
+rich>=10.14
