@@ -4,7 +4,7 @@ import time
 from rich.console import Console, ConsoleOptions, RenderResult
 from rich.table import Table
 
-from config import Colors, WIDTH
+from config import Colors, Units, WIDTH
 import utils
 from sensor import PanelDimensions, Sensor
 
@@ -15,7 +15,6 @@ class Sensors:
         self._color = Colors.PURPLE.value
         self._context = context
         self._lock = Lock()
-        self._sensors = dict()
         self._stop_event = stop_event
         self._cursor_position = (0, 0)
         self._grid = self._init_grid()
@@ -24,7 +23,7 @@ class Sensors:
                          console: Console,
                          options: ConsoleOptions) -> RenderResult:
         del console
-        panel_height = options.max_height / len(self._grid.columns[0]._cells)
+        panel_height = options.max_height / self._grid.row_count
         panel_width = options.max_width / len(self._grid.columns)
         for column in self._grid.columns:
             for cell in column._cells:
@@ -32,7 +31,8 @@ class Sensors:
                     cell.dimensions = PanelDimensions(int(panel_height), int(panel_width))
         yield self._grid
 
-    def _init_grid(self):
+    @staticmethod
+    def _init_grid():
         grid = Table(
             box=None,
             show_edge=False
@@ -43,17 +43,16 @@ class Sensors:
         return grid
 
     def add_sensor(self, sensor_id, label="Sensor"):
-        if sensor_id not in self._sensors:
-            sensor = Sensor(sensor_id, self._get_unit(), label)
-            if len(self._sensors) == 0:
-                sensor.panel.border_style = self._color
-            self._sensors[sensor_id] = label
-            for column in self._grid.columns:
-                for i, cell in enumerate(column._cells):
-                    if cell == "":
-                        column._cells[i] = sensor
-                        return
-            self._grid.add_row(sensor)
+        first_sensor = self._is_first_sensor()
+        sensor = Sensor(sensor_id, self._get_unit(), label)
+        if first_sensor:
+            sensor.panel.border_style = self._color
+        for column in self._grid.columns:
+            for i, cell in enumerate(column._cells):
+                if cell == "":
+                    column._cells[i] = sensor
+                    return
+        self._grid.add_row(sensor)
 
     def _get_cell(self, x, y):
         return self._grid.columns[x]._cells[y]
@@ -68,12 +67,8 @@ class Sensors:
         selected = self._get_cell(self._cursor_position[0], self._cursor_position[1])
         return selected
 
-    @property
-    def sensors(self):
-        return self._sensors
-
     def _get_unit(self):
-        return self._context.get_unit()
+        return self._context.unit
 
     def _get_new_position(self, delta_x, delta_y):
         new_x = self._cursor_position[0] + delta_x
@@ -87,6 +82,21 @@ class Sensors:
         if isinstance(next_cell, Sensor):
             return (new_x, new_y)
         return None
+
+    def _is_first_sensor(self):
+        for column in self._grid.columns:
+            for cell in column.cells:
+                if isinstance(cell, Sensor):
+                    return False
+        return True
+
+    def is_unique_id(self, sensor_id):
+        for column in self._grid.columns:
+            for cell in column.cells:
+                if isinstance(cell, Sensor):
+                    if cell.get_sensor_id() == sensor_id:
+                        return False
+        return True
 
     def move_cursor(self, delta_x, delta_y):
         new_position = self._get_new_position(delta_x, delta_y)
@@ -111,49 +121,52 @@ class Sensors:
     def remove_sensor(self):
         cell = self._get_selected()
         if isinstance(cell, Sensor):
-            sensor = cell
-            sensor_id = sensor.get_sensor_id()
-            x_1 = self._cursor_position[0]
-            y_1 = self._cursor_position[1]
-            x_2 = (x_1 + 1) % WIDTH
-            y_2 = y_1 if x_2 > 0 else y_1 + 1
-            while y_2 < self._grid.row_count:
-                next_cell = self._get_cell(x_2, y_2)
-                self._set_cell(next_cell, x_1, y_1)
-                x_1 = x_2
-                y_1 = y_2
-                x_2 = (x_1 + 1) % WIDTH
-                y_2 = y_1 if x_2 > 0 else y_1 + 1
-            self._set_cell("", x_1, y_1)
-            self._sensors.pop(sensor_id)
+            sensor_id = cell.get_sensor_id()
+            self._shift_following_cells_down()
             cell = self._get_selected()
             if cell == "":
-                new_position = self._get_new_position(-1, 0)
-                if new_position is not None:
-                    self._set_selected(new_position[0], new_position[1])
-                else:
-                    new_position = self._get_new_position(0, -1)
-                    if new_position is not None:
-                        new_x, new_y = new_position
-                        while self._get_new_position(1, 0):
-                            new_x += 1
-                        self._set_selected(new_x, new_y)
+                self._select_endmost_sensor()
                 cell = self._get_selected()
             if isinstance(cell, Sensor):
                 cell.panel.border_style = self._color
+            self._crop_grid()
+
+    def _crop_grid(self):
+        num_rows = self._grid.row_count
+        num_columns = len(self._grid.columns)
+        row_empty = True
+        for i in range(num_columns):
+            if isinstance(self._get_cell(i, num_rows - 1), Sensor):
+                row_empty = False
+        if row_empty:
+            self._grid.rows.pop()
+            for column in self._grid.columns:
+                column._cells.pop()
 
     def rename_sensor(self, label):
         cell = self._get_selected()
         if isinstance(cell, Sensor):
             sensor_id = cell.get_sensor_id()
             cell.set_label(label)
-            self._sensors[sensor_id] = label
 
     def run(self):
         while self._stop_event.is_set() is False:
             with self._lock:
                 self._update_dash()
             time.sleep(5)
+
+    def _select_endmost_sensor(self):
+        new_position = self._get_new_position(-1, 0)
+        if new_position is not None:
+            self._set_selected(new_position[0], new_position[1])
+        else:
+            new_position = self._get_new_position(0, -1)
+            if new_position is not None:
+                new_x, new_y = new_position
+                self._set_selected(new_x, new_y)
+                while self._get_new_position(1, 0):
+                    new_x += 1
+                    self._set_selected(new_x, new_y)
 
     def _set_cell(self, renderable, x, y):
         self._grid.columns[x]._cells[y] = renderable
@@ -170,6 +183,19 @@ class Sensors:
     def _set_selected(self, x, y):
         self._cursor_position = (x, y)
 
+    def _shift_following_cells_down(self):
+        x_1, y_1 = self._cursor_position
+        x_2 = (x_1 + 1) % WIDTH
+        y_2 = y_1 if x_2 > 0 else y_1 + 1
+        while y_2 < self._grid.row_count:
+            next_cell = self._get_cell(x_2, y_2)
+            self._set_cell(next_cell, x_1, y_1)
+            x_1 = x_2
+            y_1 = y_2
+            x_2 = (x_1 + 1) % WIDTH
+            y_2 = y_1 if x_2 > 0 else y_1 + 1
+        self._set_cell("", x_1, y_1)
+
     def toggle_units(self):
         for column in self._grid.columns:
             for cell in column.cells:
@@ -181,7 +207,7 @@ class Sensors:
         for column in self._grid.columns:
             for cell in column.cells:
                 if isinstance(cell, Sensor):
-                    cell.update_panel(self._context.get_state(), self._get_unit(), threads)
+                    cell.update_panel(self._context.state, self._get_unit(), threads)
         for thread in threads:
             thread.join()
 
@@ -194,7 +220,9 @@ class Sensors:
         current_sensor = self._get_selected()
         data = dict()
         for interval in intervals:
-            temperatures, humidities = current_sensor.get_plot_data(self._get_unit(), interval)
+            temperatures, humidities = current_sensor.get_plot_data(interval)
+            if self._get_unit() != Units.C.value:
+                temperatures = [(point[0], utils.c_to_f(point[1])) for point in temperatures]
             temperatures = utils.aggregate(temperatures, interval)
             humidities = utils.aggregate(humidities, interval)
             data[interval] = {"temperatures": temperatures, "humidities": humidities}

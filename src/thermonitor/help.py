@@ -53,7 +53,7 @@ class HelpState(State):
         return Padding(Align.left(table), 2)
 
     def _go_back(self):
-        layouts = self._context.get_layouts()
+        layouts = self._context.layouts
         layouts.get(Layouts.HELP.value).visible = False
         if (self._previous_state == "normal"
                 or self._previous_state == "edit"
@@ -73,7 +73,7 @@ class HelpState(State):
         return Align.center(table)
 
     def on_mount(self):
-        layout = self._context.get_layouts().get(Layouts.HELP.value)
+        layout = self._context.layouts.get(Layouts.HELP.value)
         layout.update(Group(Align.center(self._any_cell()),
                             self._modes_cells(),
                             self._command_line_cell()))

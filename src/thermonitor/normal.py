@@ -51,25 +51,25 @@ class NormalState(State):
 
     def _handle_h(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_cursor(-1, 0)
+            self._context.sensors.move_cursor(-1, 0)
         else:
             self._default_handle('h')
 
     def _handle_j(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_cursor(0, 1)
+            self._context.sensors.move_cursor(0, 1)
         else:
             self._default_handle('j')
 
     def _handle_k(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_cursor(0, -1)
+            self._context.sensors.move_cursor(0, -1)
         else:
             self._default_handle('k')
 
     def _handle_l(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_cursor(1, 0)
+            self._context.sensors.move_cursor(1, 0)
         else:
             self._default_handle('l')
 
@@ -87,7 +87,7 @@ class NormalState(State):
 
     def _handle_q_mark(self):
         if self._current_tooltip == "initial":
-            layouts = self._context.get_layouts()
+            layouts = self._context.layouts
             layouts.get(Layouts.DASH.value).visible = False
             layouts.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
@@ -102,7 +102,7 @@ class NormalState(State):
 
     def _handle_t(self):
         if self._current_tooltip == "initial":
-            layouts = self._context.get_layouts()
+            layouts = self._context.layouts
             layouts.get(Layouts.DASH.value).visible = False
             layouts.get(Layouts.SPINNER.value).visible = True
             self._context.change_state("detail")
@@ -111,12 +111,12 @@ class NormalState(State):
 
     def _handle_u(self):
         if self._current_tooltip == "initial":
-            current_unit = self._context.get_unit()
+            current_unit = self._context.unit
             new_unit = (Units.F.value
                         if current_unit == Units.C.value
                         else Units.C.value)
-            self._context.set_unit(new_unit)
-            self._context.get_sensors().toggle_units()
+            self._context.unit = new_unit
+            self._context.sensors.toggle_units()
         else:
             self._default_handle('u')
 
@@ -127,7 +127,7 @@ class NormalState(State):
             self._default_handle('y')
 
     def on_mount(self):
-        self._context.get_sensors().set_color(self._cursor_color)
+        self._context.sensors.set_color(self._cursor_color)
 
     @staticmethod
     def render_initial_tooltip():

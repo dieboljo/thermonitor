@@ -12,7 +12,7 @@ try:
             result = str(key, encoding="utf8")
         except:
             result = key
-        
+
         return result
 
 except:
@@ -51,8 +51,3 @@ if __name__ == "__main__":
             print(f"Space: {ord(char)}")
         else:
             print(f"{char}: {ord(char)}")
-        #print("You pressed <<%s>>" % c)
-        #if c == '\x1b':
-        #    print("Esc")
-        #elif c == '\x20':
-        #    print("Space")

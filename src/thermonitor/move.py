@@ -33,31 +33,31 @@ class MoveState(State):
 
     def _handle_h(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_sensor(-1, 0)
+            self._context.sensors.move_sensor(-1, 0)
         else:
             self._default_handle('h')
 
     def _handle_j(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_sensor(0, 1)
+            self._context.sensors.move_sensor(0, 1)
         else:
             self._default_handle('j')
 
     def _handle_k(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_sensor(0, -1)
+            self._context.sensors.move_sensor(0, -1)
         else:
             self._default_handle('k')
 
     def _handle_l(self):
         if self._current_tooltip == "initial":
-            self._context.get_sensors().move_sensor(1, 0)
+            self._context.sensors.move_sensor(1, 0)
         else:
             self._default_handle('l')
 
     def _handle_q_mark(self):
         if self._current_tooltip == "initial":
-            layouts = self._context.get_layouts()
+            layouts = self._context.layouts
             layouts.get(Layouts.DASH.value).visible = False
             layouts.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
@@ -65,7 +65,7 @@ class MoveState(State):
             self._default_handle('?')
 
     def on_mount(self):
-        self._context.get_sensors().set_color(self._cursor_color)
+        self._context.sensors.set_color(self._cursor_color)
 
     @staticmethod
     def render_initial_tooltip():
@@ -77,7 +77,7 @@ class MoveState(State):
             title_style=f"bold {Colors.YELLOW.value}",
         )
         hint.add_column(justify="center")
-        hint.add_row("(←|h) (↓|j) "
-                     "(↑|k) (→|l) to move")
+        hint.add_row("(◀|h) (▼|j) "
+                     "(▲|k) (▶|l) to move")
         hint.add_row("(Enter|q)uit move mode")
         return Align.center(hint, vertical="middle")

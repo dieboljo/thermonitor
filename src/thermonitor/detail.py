@@ -11,9 +11,8 @@ from rich.text import Text
 
 from config import Colors, Intervals, Layouts, LocationInfo, Units
 from plot import Plot
-import utils
-
 from state import State
+import utils
 
 
 class DetailState(State):
@@ -33,6 +32,43 @@ class DetailState(State):
         self._plot_data = {}
         self._sensor_info = None
 
+    def _build_location_info_table(self, info):
+        table = Table(box=box.HORIZONTALS, expand=True,
+                      title=(info.city if info.city else str(info.zip_code)),
+                      show_header=False, show_edge=True, title_style="bold dark_goldenrod")
+        temp_unit = self._context.unit
+        wind_speed_unit = 'm/s'
+        if temp_unit == 'F':
+            wind_speed_unit = 'mph'
+        table.add_column(style="light_coral", justify="right", width=20)
+        table.add_column(width=30)
+        table.add_row("Temperature: ", str(info.temperature) + f" °{temp_unit}")
+        table.add_row("Humidity: ", str(info.humidity) + " %")
+        table.add_row("Pressure: ", str(info.pressure) + " hPa")
+        table.add_row("Wind Direction: ", str(info.wind_direction) + " °")
+        table.add_row("Wind Speed: ", str(info.wind_speed) + f" {wind_speed_unit}")
+        return table
+
+    def _build_sensor_info_table(self, info):
+        table = Table(box=box.HORIZONTALS, expand=True, title=info.label,
+                      show_header=False, show_edge=True, title_style="bold dark_goldenrod")
+        last_updated = ''
+        if info.epoch_time:
+            local_time = time.localtime(info.epoch_time)
+            last_updated = time.asctime(local_time)
+        table.add_column(style="light_coral", justify="right", width=20)
+        table.add_column(width=30)
+        table.add_row("Sensor ID: ", info.device_id)
+        table.add_row("Last updated: ", last_updated)
+        temp_unit = self._context.unit
+        if info.temperature:
+            temperature = (info.temperature if self._context.unit == 'C'
+                           else utils.c_to_f(info.temperature))
+            table.add_row("Temperature: ", str(temperature) + f" °{temp_unit}")
+        if info.humidity:
+            table.add_row("Humidity: ", str(info.humidity) + " %")
+        return table
+
     @staticmethod
     def _create_humidity_plot(data_x, data_y, labels=None):
         plot = Plot(data_x, data_y)
@@ -46,7 +82,7 @@ class DetailState(State):
         plot = Plot(data_x, data_y)
         plot.set_title("Temperature")
         plot.set_labels(labels)
-        plot.set_legend(f"° {self._context.get_unit()}")
+        plot.set_legend(f"° {self._context.unit}")
         plot.set_color("red")
         return plot
 
@@ -68,7 +104,7 @@ class DetailState(State):
             pressure = data["main"]["pressure"]
             wind_speed = data["wind"]["speed"]
             wind_direction = data["wind"]["deg"]
-            if self._context.get_unit() == Units.F.value and temperature and wind_speed:
+            if self._context.unit == Units.F.value and temperature and wind_speed:
                 temperature = utils.c_to_f(temperature)
                 wind_speed = utils.mps_to_mph(wind_speed)
             return LocationInfo(city, humidity, pressure, temperature,
@@ -77,19 +113,19 @@ class DetailState(State):
 
     def _get_new_data(self):
         intervals = [Intervals.DAY.value, Intervals.HOUR.value, Intervals.MINUTE.value]
-        self._sensor_info = self._context.get_sensors().update_info()
+        self._sensor_info = self._context.sensors.update_info()
         self._location_info = self._refresh_location_info(self._sensor_info.location_id)
-        self._plot_data = self._context.get_sensors().update_timeline(intervals)
+        self._plot_data = self._context.sensors.update_timeline(intervals)
 
     def _go_back(self):
         self._clear_details()
-        layouts = self._context.get_layouts()
+        layouts = self._context.layouts
         layouts.get(Layouts.DETAIL.value).visible = False
         layouts.get(Layouts.DASH.value).visible = True
         self._context.change_state("normal")
 
     def _clear_details(self):
-        layouts = self._context.get_layouts()
+        layouts = self._context.layouts
         layouts.get(Layouts.TEMPERATURE_TIMELINE.value).update("")
         layouts.get(Layouts.HUMIDITY_TIMELINE.value).update("")
         layouts.get(Layouts.SENSOR_INFO.value).update("")
@@ -109,7 +145,7 @@ class DetailState(State):
 
     def _handle_q_mark(self):
         if self._current_tooltip == "initial":
-            layouts = self._context.get_layouts()
+            layouts = self._context.layouts
             layouts.get(Layouts.DETAIL.value).visible = False
             layouts.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
@@ -139,92 +175,37 @@ class DetailState(State):
 
     def _render_humidity_timeline(self):
         data_x, data_y, labels = self._plot_data[self._interval]["humidities"]
-        layout = self._context.get_layouts().get(Layouts.HUMIDITY_TIMELINE.value)
+        layout = self._context.layouts.get(Layouts.HUMIDITY_TIMELINE.value)
         if data_x and data_y:
             plot = self._create_humidity_plot(data_x, data_y, labels)
             padding = plot.get_dimensions().padding
             layout.update(Padding(Align.center(plot, vertical="middle"), padding))
         else:
             if self._interval == Intervals.MINUTE.value:
-                layout.update(
-                    Align.center(Text("No minutely humidity data"), vertical="middle")
-                )
+                layout.update(Align.center(Text("No minutely humidity data"), vertical="middle"))
             elif self._interval == Intervals.HOUR.value:
-                layout.update(
-                    Align.center(Text("No hourly humidity data"), vertical="middle")
-                )
+                layout.update(Align.center(Text("No hourly humidity data"), vertical="middle"))
             elif self._interval == Intervals.DAY.value:
-                layout.update(
-                    Align.center(Text("No daily humidity data"), vertical="middle")
-                )
+                layout.update(Align.center(Text("No daily humidity data"), vertical="middle"))
 
     def _render_location_info(self):
-        layout = self._context.get_layouts().get(Layouts.LOCATION_INFO.value)
+        layout = self._context.layouts.get(Layouts.LOCATION_INFO.value)
         info = self._location_info
         if info:
-            table = Table(
-                box=box.HORIZONTALS,
-                expand=True,
-                title=(info.city
-                       if info.city
-                       else str(info.zip_code)),
-                show_header=False,
-                show_edge=True,
-                title_style="bold dark_goldenrod",
-            )
-            temp_unit = self._context.get_unit()
-            wind_speed_unit = 'm/s'
-            if temp_unit == 'F':
-                wind_speed_unit = 'mph'
-            table.add_column(style="light_coral", justify="right", width=20)
-            table.add_column(width=30)
-            table.add_row("Temperature: ",
-                          str(info.temperature) + f" °{temp_unit}")
-            table.add_row("Humidity: ",
-                          str(info.humidity) + " %")
-            table.add_row("Pressure: ",
-                          str(info.pressure) + " hPa")
-            table.add_row("Wind Direction: ",
-                          str(info.wind_direction) + " °")
-            table.add_row("Wind Speed: ",
-                          str(info.wind_speed) + f" {wind_speed_unit}")
+            table = self._build_location_info_table(info)
             layout.update(Align.center(table, vertical="middle"))
         else:
             layout.update(Align.center("No location data", vertical="middle"))
 
     def _render_sensor_info(self):
-        layout = self._context.get_layouts().get(Layouts.SENSOR_INFO.value)
+        layout = self._context.layouts.get(Layouts.SENSOR_INFO.value)
         info = self._sensor_info
-        table = Table(
-            box=box.HORIZONTALS,
-            expand=True,
-            title=info.label,
-            show_header=False,
-            show_edge=True,
-            title_style="bold dark_goldenrod",
-        )
-        last_updated = ''
-        if info.epoch_time:
-            local_time = time.localtime(info.epoch_time)
-            last_updated = time.asctime(local_time)
-        table.add_column(style="light_coral", justify="right", width=20)
-        table.add_column(width=30)
-        table.add_row("Sensor ID: ", info.device_id)
-        table.add_row("Last updated: ", last_updated)
-        temp_unit = self._context.get_unit()
-        if info.temperature:
-            temperature = (info.temperature if self._context.get_unit() == 'C'
-                           else utils.c_to_f(info.temperature))
-            table.add_row("Temperature: ",
-                          str(temperature) + f" °{temp_unit}")
-        if info.humidity:
-            table.add_row("Humidity: ",
-                          str(info.humidity) + " %")
+        table = self._build_sensor_info_table(info)
         layout.update(Align.center(table, vertical="middle"))
 
     def _render_temperature_timeline(self):
         data_x, data_y, labels = self._plot_data[self._interval]["temperatures"]
-        layout = self._context.get_layouts().get(Layouts.TEMPERATURE_TIMELINE.value)
+        layout = self._context.layouts.get(Layouts.TEMPERATURE_TIMELINE.value)
         if data_x and data_y:
             plot = self._create_temperature_plot(data_x, data_y, labels)
             padding = plot.get_dimensions().padding
@@ -254,7 +235,7 @@ class DetailState(State):
         return Align.center(hint, vertical="middle")
 
     def _refresh_details(self):
-        layouts = self._context.get_layouts()
+        layouts = self._context.layouts
         status = Status(status="",
                         spinner="bouncingBall",
                         spinner_style="bold dark_goldenrod")

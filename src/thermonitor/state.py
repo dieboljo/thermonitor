@@ -65,5 +65,5 @@ class State(ABC):
 
     def set_tooltip(self, tooltip):
         self._current_tooltip = tooltip
-        layout = self._context.get_layouts().get(Layouts.TOOLTIP.value)
+        layout = self._context.layouts.get(Layouts.TOOLTIP.value)
         layout.update(self._tooltips[tooltip]())

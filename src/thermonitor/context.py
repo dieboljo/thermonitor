@@ -7,6 +7,7 @@ from edit import EditState
 from help import HelpState
 from move import MoveState
 from normal import NormalState
+from sensor import Sensor
 import utils
 
 INTERVALS = [Intervals.HOUR.value, Intervals.DAY.value, Intervals.MINUTE.value]
@@ -14,6 +15,7 @@ UNITS = [Units.F.value, Units.C.value]
 
 class Context:
     _layouts = None
+    _listener = None
     _sensors = None
     _state = None
     _unit = Units.C.value
@@ -35,21 +37,40 @@ class Context:
         state.set_tooltip("initial")
         state.on_mount()
 
+    def _get_sensor_list(self):
+        sensors = []
+        columns = self._sensors.get_grid().columns
+        cells = [list(column.cells) for column in columns]
+        for column in cells:
+            column.reverse()
+        current_column = 0
+        while len(cells[current_column]):
+            cell = cells[current_column].pop()
+            if isinstance(cell, Sensor):
+                sensors.append({"id": cell.get_sensor_id(),
+                                "label": cell.get_label()})
+            current_column = (current_column + 1) % len(columns)
+        return sensors
+
     @property
     def file(self):
         return self._file
 
-    def get_layouts(self):
+    @property
+    def layouts(self):
         return self._layouts
 
-    def get_sensors(self):
-        return self._sensors
+    @layouts.setter
+    def layouts(self, value):
+        self._layouts = value
 
-    def get_state(self):
-        return self._state
+    @property
+    def listener(self):
+        return self._listener
 
-    def get_unit(self):
-        return self._unit
+    @listener.setter
+    def listener(self, value):
+        self._listener = value
 
     def load_state(self):
         file = os.path.expanduser(self._file)
@@ -61,16 +82,7 @@ class Context:
                 except ValueError:
                     pass
         if state:
-            if "unit" in state and state["unit"] in UNITS:
-                self._unit = state["unit"]
-            if "interval" in state and state["interval"] in INTERVALS:
-                self._states["detail"].interval = state["interval"]
-            if "sensors" in state:
-                for sensor_id, sensor_label in state["sensors"].items():
-                    clean_id = utils.sanitize_id(sensor_id)
-                    clean_label = utils.sanitize_label(sensor_label)
-                    if len(clean_id) > 0:
-                        self._sensors.add_sensor(clean_id, clean_label)
+            self._set_state(state)
 
     def on_key(self, key):
         self._states[self._state].handle_key(key)
@@ -81,16 +93,39 @@ class Context:
             'w'
         ) as outfile:
             state = dict()
-            state["sensors"] = self._sensors.sensors
             state["unit"] = self._unit
             state["interval"] = self._states["detail"].interval
+            state["sensors"] = self._get_sensor_list()
             json.dump(state, outfile)
 
-    def set_layouts(self, layouts):
-        self._layouts = layouts
+    @property
+    def sensors(self):
+        return self._sensors
 
-    def set_sensors(self, sensors):
-        self._sensors = sensors
+    @sensors.setter
+    def sensors(self, value):
+        self._sensors = value
 
-    def set_unit(self, unit):
-        self._unit = unit
+    def _set_state(self, state):
+        if "unit" in state and state["unit"] in UNITS:
+            self._unit = state["unit"]
+        if "interval" in state and state["interval"] in INTERVALS:
+            self._states["detail"].interval = state["interval"]
+        if "sensors" in state:
+            for sensor in state["sensors"]:
+                clean_id = utils.sanitize_id(sensor["id"])
+                clean_label = utils.sanitize_label(sensor["label"])
+                if len(clean_id) > 0:
+                    self._sensors.add_sensor(clean_id, clean_label)
+
+    @property
+    def state(self):
+        return self._state
+
+    @property
+    def unit(self):
+        return self._unit
+
+    @unit.setter
+    def unit(self, value):
+        self._unit = value

@@ -17,7 +17,6 @@ import utils
 DASH_STATES = ["normal", "edit", "move"]
 HOSTNAME = "bko7deq544.execute-api.us-east-2.amazonaws.com/dev"
 AUTHORIZATION_TOKEN = "allow"
-PANEL_WIDTH = 35
 MAX_WIDTH = 50
 MAX_HEIGHT = 9
 MIN_HEIGHT = 8
@@ -45,6 +44,16 @@ class Sensor:
                             if self._dimensions.width else None)
         yield self.panel
 
+    @staticmethod
+    def _calculate_plot_domain(interval):
+        end_time = time.time()
+        start_time = end_time - (24 * 60 * 60)
+        if interval == "minute":
+            start_time = end_time - (60 * 60)
+        elif interval == "day":
+            start_time = end_time - (30 * 24 * 60 * 60)
+        return (start_time, end_time)
+
     @property
     def dimensions(self):
         return self._dimensions
@@ -53,39 +62,29 @@ class Sensor:
     def dimensions(self, panel_dimensions):
         self._dimensions = panel_dimensions
 
+    def _fetch_plot_data(self, start_time, end_time):
+        endpoint = (f"https://{HOSTNAME}/sensors/devices/{self._sensor_id}"
+                    f"?start={start_time}&end={end_time}")
+        headers = {'authorization-token': AUTHORIZATION_TOKEN}
+        response = requests.get(endpoint, headers=headers)
+        data = response.json()
+        return data
+
     def get_sensor_id(self):
         return self._sensor_id
 
     def get_label(self):
         return self._label
 
-    def get_plot_data(self, unit, interval="hour"):
-        end_time = time.time()
-        start_time = end_time - (24 * 60 * 60)
-        if interval == "minute":
-            start_time = end_time - (60 * 60)
-        elif interval == "day":
-            start_time = end_time - (30 * 24 * 60 * 60)
-        endpoint = (f"https://{HOSTNAME}/sensors/devices/{self._sensor_id}"
-                    f"?start={start_time}&end={end_time}")
-        headers = {'authorization-token': AUTHORIZATION_TOKEN}
-        response = requests.get(endpoint, headers=headers)
-        data = response.json()
-        temperatures = []
-        humidities = []
+    def get_plot_data(self, interval="hour"):
+        start_time, end_time = self._calculate_plot_domain(interval)
+        data = self._fetch_plot_data(start_time, end_time)
         if data:
+            temperatures = []
+            humidities = []
             for entry in data:
-                if 'Temperature' in entry:
-                    point = (float(entry['EpochTime']['Value']),
-                             float(entry['Temperature']['Value']))
-                    if unit != Units.C.value:
-                        f_temp = utils.c_to_f(point[1])
-                        point = (point[0], f_temp)
-                    temperatures.append(point)
-                if 'Humidity' in entry:
-                    point = (float(entry['EpochTime']['Value']),
-                             float(entry['Humidity']['Value']))
-                    humidities.append(point)
+                self._parse_data_field(entry, 'Temperature', temperatures)
+                self._parse_data_field(entry, 'Humidity', humidities)
             return (temperatures, humidities)
         return ([], [])
 
@@ -108,17 +107,10 @@ class Sensor:
 
     @staticmethod
     def init_humidity():
-        humidity = Progress(
-                            "{task.description}",
-                            BarColumn(),
-                            TextColumn(
-                                "{task.completed}",
-                                table_column=Column(width=5),
-                                justify="right",
-                            ),
-                            " %",
-                            expand=True,
-                           )
+        humidity = Progress("{task.description}", BarColumn(),
+                            TextColumn("{task.completed}", table_column=Column(width=5),
+                                       justify="right"),
+                            " %", expand=True)
         humidity.add_task("[blue]Humidity   ", total=100)
         return humidity
 
@@ -138,7 +130,8 @@ class Sensor:
                      title=f"{self._sensor_id}",
                      padding=(1, 2))
 
-    def init_temperature(self, unit):
+    @staticmethod
+    def init_temperature(unit):
         temperature = Progress("{task.description}",
                                BarColumn(),
                                TextColumn("{task.completed}",
@@ -148,6 +141,13 @@ class Sensor:
                                expand=True)
         temperature.add_task("[red]Temperature", total=120, unit=unit)
         return temperature
+
+    @staticmethod
+    def _parse_data_field(entry, field_name, value_list):
+        if field_name in entry:
+            point = (float(entry['EpochTime']['Value']),
+                     float(entry[field_name]['Value']))
+            value_list.append(point)
 
     def set_label(self, label):
         self._label = label

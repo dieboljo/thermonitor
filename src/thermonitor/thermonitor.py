@@ -23,14 +23,25 @@ def main():
         stop_event.set()
 
 def run(stop_event):
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--file", '-f', help="file location for program state", \
-                        default="~/.thermonitor.conf")
-    args = parser.parse_args()
+    args = parse_args()
 
+    layout = build_layout()
+
+    context = configure_context(args, layout, stop_event)
+
+    populate_layout(context)
+
+    start_tasks(context)
+
+    # start live display
+    with Live(layout, refresh_per_second=20):
+        while True:
+            context.listener.handle_char()
+            time.sleep(.05)
+
+def build_layout():
     layout = Layout()
 
-    # build layout
     layout.split(Layout(name=Layouts.HEADER.value, ratio=1, minimum_size=4),
                  Layout(name=Layouts.MAIN.value, ratio=6))
     layout["header"].split_row(Layout(name=Layouts.TITLE.value, ratio=3),
@@ -46,45 +57,46 @@ def run(stop_event):
                                Layout(name=Layouts.TIMELINE.value, ratio=1))
     layout["info"].split_column(Layout(name=Layouts.SENSOR_INFO.value, ratio=1),
                                 Layout(name=Layouts.LOCATION_INFO.value, ratio=1))
-    layout["timeline"].split_column(Layout(name=Layouts.TEMPERATURE_TIMELINE.value,
-                                       ratio=1),
-                                    Layout(name=Layouts.HUMIDITY_TIMELINE.value,
-                                       ratio=1))
+    layout["timeline"].split_column(Layout(name=Layouts.TEMPERATURE_TIMELINE.value, ratio=1),
+                                    Layout(name=Layouts.HUMIDITY_TIMELINE.value, ratio=1))
+    return layout
 
-    # establish context
+def configure_context(args, layout, stop_event):
     context = Context(args.file)
-    context.set_layouts(layout)
+    context.layouts = layout
     sensors = Sensors(context, stop_event)
-    context.set_sensors(sensors)
-
-    # load frame
-    context.change_state("normal")
-    context.load_state()
-
-    # populate layout
-    layout["title"].update(
-        Padding(Align.center(FigletText("Thermonitor"), vertical="middle"),
-                (0, 1)))
-    #layout["dash"].update(Align.center(sensors.get_grid()))
-    layout["dash"].update(Align.center(sensors))
-
-    # start task to update sensor data
-    sensor_task = Thread(target=sensors.run, daemon=True)
-    sensor_task.start()
-
-    # start key listener
+    context.sensors = sensors
     listener = KeyListener(context.on_key,
                            stop_event,
                            sensors.get_lock())
-    listener_task = Thread(target=listener.listen, daemon=True)
+    context.listener = listener
+    context.change_state("normal")
+    context.load_state()
+    return context
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--file", '-f', help="file location for program state", \
+                        default="~/.thermonitor.conf")
+    return parser.parse_args()
+
+def populate_layout(context):
+    layout = context.layouts
+    sensors = context.sensors
+    layout["title"].update(
+        Padding(Align.center(FigletText("Thermonitor"), vertical="middle"), (0, 1)))
+    layout["dash"].update(Align.center(sensors))
+
+def start_tasks(context):
+    # start task to update sensor data
+    sensor_task = Thread(target=context.sensors.run, daemon=True)
+    sensor_task.start()
+
+    # start key listener
+    listener_task = Thread(target=context.listener.listen, daemon=True)
     listener_task.start()
 
-    # start live display
-    #with Live(layout, refresh_per_second=20, transient=True):
-    with Live(layout, refresh_per_second=20):
-        while True:
-            listener.handle_char()
-            time.sleep(.05)
+
 
 
 if __name__ == "__main__":

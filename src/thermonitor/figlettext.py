@@ -18,19 +18,22 @@ class FigletText:
         self, console: Console, options: ConsoleOptions
     ) -> RenderResult:
         """Build a Rich renderable to render the Figlet text."""
+        del console
         width = options.max_width
         height = options.max_height
-        size = min(options.max_width / 2, options.max_height)
         if height < 3 or width < 30:
             yield Text(self.text, style="bold")
         else:
-            if height < 5 or width < 50:
-                font_name = "mini"
-            elif height < 6 or width < 65:
-                font_name = "small"
-            elif height < 7 or width < 70:
-                font_name = "standard"
-            else:
-                font_name = "big"
+            font_name = self._calculate_font_name(height, width)
             font = Figlet(font=font_name, width=options.max_width)
             yield Text(font.renderText(self.text).rstrip("\n"), style="bold")
+
+    @staticmethod
+    def _calculate_font_name(height, width):
+        if height < 5 or width < 50:
+            return "mini"
+        if height < 6 or width < 65:
+            return "small"
+        if height < 7 or width < 70:
+            return "standard"
+        return "big"
