@@ -2,7 +2,7 @@ from rich.align import Align
 from rich.table import Table
 from rich.text import Text
 
-from config import Colors, Layouts, Units
+from config import Colors, Layouts
 from state import State
 
 class NormalState(State):
@@ -111,12 +111,7 @@ class NormalState(State):
 
     def _handle_u(self):
         if self._current_tooltip == "initial":
-            current_unit = self._context.unit
-            new_unit = (Units.F.value
-                        if current_unit == Units.C.value
-                        else Units.C.value)
-            self._context.unit = new_unit
-            self._context.sensors.toggle_units()
+            self._context.toggle_units()
         else:
             self._default_handle('u')
 
@@ -148,6 +143,7 @@ class NormalState(State):
     @staticmethod
     def render_save_tooltip():
         prompt = Align.left(Text("Save current layout? (y/n)",
-                            justify="center"),
+                            justify="center",
+                            style=f"bold {Colors.GREEN.value}"),
                             vertical="middle")
         return prompt

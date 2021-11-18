@@ -193,7 +193,7 @@ class EditState(State):
     @staticmethod
     def _render_blank_id_tooltip():
         return Align.center(Text("Sensor ID cannot be blank!",
-                                 style="bold red",
+                                 style=f"bold {Colors.RED.value}",
                                  justify="center"),
                             vertical="middle")
 
@@ -201,7 +201,8 @@ class EditState(State):
     def _render_delete_tooltip():
         prompt = Align.left(
                     Text("Are you sure? (y/n)",
-                         justify="center"),
+                         justify="center",
+                         style=f"bold {Colors.GREEN.value}"),
                     vertical="middle")
         return prompt
 
@@ -214,7 +215,8 @@ class EditState(State):
 
     def _render_id_prompt_tooltip(self):
         prompt = Align.left(
-                    Text(f"Sensor ID: {self._id_input.get()}"),
+                    Text(f"Sensor ID: {self._id_input.get()}",
+                         style=f"bold {Colors.GREEN.value}"),
                     vertical="middle"
                  )
         return prompt
@@ -237,14 +239,16 @@ class EditState(State):
 
     def _render_label_prompt_tooltip(self):
         prompt = Align.left(
-            Text(f"Label for sensor: {self._label_input.get()}"),
+            Text(f"Label for sensor: {self._label_input.get()}",
+                 style=f"bold {Colors.GREEN.value}"),
             vertical="middle"
         )
         return prompt
 
     def _render_rename_prompt_tooltip(self):
         prompt = Align.left(
-            Text(f"New label: {self._rename_input.get()}"),
+            Text(f"New label: {self._rename_input.get()}",
+                 style=f"bold {Colors.GREEN.value}"),
             vertical="middle"
         )
         return prompt

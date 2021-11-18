@@ -1,4 +1,5 @@
 import time
+from typing import NamedTuple
 
 import requests
 from requests.exceptions import RequestException
@@ -26,6 +27,7 @@ class DetailState(State):
             'm': self._handle_m,
             'q': self._handle_q,
             'r': self._handle_r,
+            'u': self._handle_u,
         }
         self._interval = Intervals.HOUR.value
         self._location_info = None
@@ -33,20 +35,17 @@ class DetailState(State):
         self._sensor_info = None
 
     def _build_location_info_table(self, info):
+        f_info = self._format_location_info(info)
         table = Table(box=box.HORIZONTALS, expand=True,
-                      title=(info.city if info.city else str(info.zip_code)),
+                      title=(f_info.city if f_info.city else f_info.zip_code),
                       show_header=False, show_edge=True, title_style="bold dark_goldenrod")
-        temp_unit = self._context.unit
-        wind_speed_unit = 'm/s'
-        if temp_unit == 'F':
-            wind_speed_unit = 'mph'
         table.add_column(style="light_coral", justify="right", width=20)
         table.add_column(width=30)
-        table.add_row("Temperature: ", str(info.temperature) + f" °{temp_unit}")
-        table.add_row("Humidity: ", str(info.humidity) + " %")
-        table.add_row("Pressure: ", str(info.pressure) + " hPa")
-        table.add_row("Wind Direction: ", str(info.wind_direction) + " °")
-        table.add_row("Wind Speed: ", str(info.wind_speed) + f" {wind_speed_unit}")
+        table.add_row("Temperature: ", f_info.temperature)
+        table.add_row("Humidity: ", f_info.humidity)
+        table.add_row("Pressure: ", f_info.pressure)
+        table.add_row("Wind Direction: ", f_info.wind_direction)
+        table.add_row("Wind Speed: ", f_info.wind_speed)
         return table
 
     def _build_sensor_info_table(self, info):
@@ -79,7 +78,11 @@ class DetailState(State):
         return plot
 
     def _create_temperature_plot(self, data_x, data_y, labels=None):
-        plot = Plot(data_x, data_y)
+        temperature_data = (data_y if self._context.unit == Units.C.value
+                            else (list(map(utils.c_to_f, data_y))))
+        with open('log.txt', 'a') as file:
+            file.write('\n' + str(temperature_data))
+        plot = Plot(data_x, temperature_data)
         plot.set_title("Temperature")
         plot.set_labels(labels)
         plot.set_legend(f"° {self._context.unit}")
@@ -89,7 +92,21 @@ class DetailState(State):
     def _default_handle(self, key):
         pass
 
-    def _get_location_info(self, zip_code):
+    def _format_location_info(self, info):
+        temp_unit = self._context.unit
+        wind_speed_unit = 'm/s'
+        temperature = info.temperature
+        wind_speed = info.wind_speed
+        if temp_unit == Units.F.value:
+            wind_speed_unit = 'mph'
+            temperature = utils.c_to_f(temperature)
+            wind_speed = utils.mps_to_mph(wind_speed)
+        return FormattedLocationInfo(info.city, f"{info.humidity} %", f"{info.pressure} hPa",
+                                     f"{temperature} °{temp_unit}", f"{info.wind_direction} °",
+                                     f"{wind_speed} {wind_speed_unit}", str(info.zip_code))
+
+    @staticmethod
+    def _get_location_info(zip_code):
         endpoint = f"http://localhost:57239/?zip={zip_code}"
         data = None
         try:
@@ -104,9 +121,6 @@ class DetailState(State):
             pressure = data["main"]["pressure"]
             wind_speed = data["wind"]["speed"]
             wind_direction = data["wind"]["deg"]
-            if self._context.unit == Units.F.value and temperature and wind_speed:
-                temperature = utils.c_to_f(temperature)
-                wind_speed = utils.mps_to_mph(wind_speed)
             return LocationInfo(city, humidity, pressure, temperature,
                                 wind_direction, wind_speed, int(zip_code))
         return None
@@ -155,6 +169,10 @@ class DetailState(State):
     def _handle_r(self):
         self._refresh_details()
 
+    def _handle_u(self):
+        self._context.toggle_units()
+        self._render_details()
+
     @property
     def interval(self):
         return self._interval
@@ -164,8 +182,9 @@ class DetailState(State):
         self._interval = value
 
     def on_mount(self):
-        self._clear_details()
-        self._refresh_details()
+        if self._previous_state == "normal":
+            self._clear_details()
+            self._refresh_details()
 
     def _render_details(self):
         self._render_sensor_info()
@@ -231,7 +250,7 @@ class DetailState(State):
         hint.add_column()
         hint.add_column()
         hint.add_row("(m)inutely", "(h)ourly", "(d)aily")
-        hint.add_row("(q)uit timeline mode", "(r)efresh", "(?)help")
+        hint.add_row("(q)uit timeline mode", "(r)efresh", "(u)nit toggle")
         return Align.center(hint, vertical="middle")
 
     def _refresh_details(self):
@@ -252,3 +271,12 @@ class DetailState(State):
             location_info = self._get_location_info(location_id)
             return location_info
         return None
+
+class FormattedLocationInfo(NamedTuple):
+    city: str
+    humidity: str
+    pressure: str
+    temperature: str
+    wind_direction: str
+    wind_speed: str
+    zip_code: str

@@ -122,6 +122,14 @@ class Context:
     def state(self):
         return self._state
 
+    def toggle_units(self):
+        current_unit = self.unit
+        new_unit = (Units.F.value
+                    if current_unit == Units.C.value
+                    else Units.C.value)
+        self.unit = new_unit
+        self.sensors.set_unit(new_unit)
+
     @property
     def unit(self):
         return self._unit

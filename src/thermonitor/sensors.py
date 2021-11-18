@@ -26,7 +26,7 @@ class Sensors:
         panel_height = options.max_height / self._grid.row_count
         panel_width = options.max_width / len(self._grid.columns)
         for column in self._grid.columns:
-            for cell in column._cells:
+            for cell in list(column.cells):
                 if isinstance(cell, Sensor):
                     cell.dimensions = PanelDimensions(int(panel_height), int(panel_width))
         yield self._grid
@@ -47,10 +47,11 @@ class Sensors:
         sensor = Sensor(sensor_id, self._get_unit(), label)
         if first_sensor:
             sensor.panel.border_style = self._color
-        for column in self._grid.columns:
-            for i, cell in enumerate(column._cells):
+        for x, column in enumerate(self._grid.columns):
+            cells = list(column.cells)
+            for y, cell in enumerate(cells):
                 if cell == "":
-                    column._cells[i] = sensor
+                    self._set_cell(sensor, x, y)
                     return
         self._grid.add_row(sensor)
 
@@ -121,7 +122,6 @@ class Sensors:
     def remove_sensor(self):
         cell = self._get_selected()
         if isinstance(cell, Sensor):
-            sensor_id = cell.get_sensor_id()
             self._shift_following_cells_down()
             cell = self._get_selected()
             if cell == "":
@@ -146,7 +146,6 @@ class Sensors:
     def rename_sensor(self, label):
         cell = self._get_selected()
         if isinstance(cell, Sensor):
-            sensor_id = cell.get_sensor_id()
             cell.set_label(label)
 
     def run(self):
@@ -196,11 +195,11 @@ class Sensors:
             y_2 = y_1 if x_2 > 0 else y_1 + 1
         self._set_cell("", x_1, y_1)
 
-    def toggle_units(self):
+    def set_unit(self, unit):
         for column in self._grid.columns:
             for cell in column.cells:
                 if isinstance(cell, Sensor):
-                    cell.set_unit(self._get_unit())
+                    cell.set_unit(unit)
 
     def _update_dash(self):
         threads = []
@@ -221,8 +220,6 @@ class Sensors:
         data = dict()
         for interval in intervals:
             temperatures, humidities = current_sensor.get_plot_data(interval)
-            if self._get_unit() != Units.C.value:
-                temperatures = [(point[0], utils.c_to_f(point[1])) for point in temperatures]
             temperatures = utils.aggregate(temperatures, interval)
             humidities = utils.aggregate(humidities, interval)
             data[interval] = {"temperatures": temperatures, "humidities": humidities}

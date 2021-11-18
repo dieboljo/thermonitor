@@ -130,5 +130,6 @@ class HelpState(State):
         table.add_row(spacing, Align.right('d'), ':', "show plot data by day")
         table.add_row(spacing, Align.right('h'), ':', "show plot data by hour")
         table.add_row(spacing, Align.right('r'), ':', "refresh plot data")
+        table.add_row(spacing, Align.right('u'), ':', "toggle temperature units (°C or °F)")
         table.add_row(spacing, Align.right("q or Esc"), ':', "go back to dashboard")
         return Padding(Align.left(table), 2)
