@@ -36,10 +36,10 @@ class Plot:
         plt.scatter(self._data_x, self._data_y, fillx=True,
                     label=self._legend, marker='sd')
         plt.xticks(self._data_x, self._labels)
-        plt.xaxis(True, False)
-        plt.yaxis(True, False)
+        plt.xaxis(0, 'upper')
+        plt.yaxis(0, 'right')
         plt.colorless()
-        #plt.show(hide=True)
+        plt.ylim(min(self._data_y), max(self._data_y) + 1)
 
     def get_dimensions(self):
         return self._dimensions

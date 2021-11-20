@@ -63,7 +63,7 @@ def build_layout():
 
 def configure_context(args, layout, stop_event):
     context = Context(args.file)
-    context.layouts = layout
+    context.layout = layout
     sensors = Sensors(context, stop_event)
     context.sensors = sensors
     listener = KeyListener(context.on_key,
@@ -71,7 +71,7 @@ def configure_context(args, layout, stop_event):
                            sensors.get_lock())
     context.listener = listener
     context.change_state("normal")
-    context.load_state()
+    context.load_config()
     return context
 
 def parse_args():
@@ -81,7 +81,7 @@ def parse_args():
     return parser.parse_args()
 
 def populate_layout(context):
-    layout = context.layouts
+    layout = context.layout
     sensors = context.sensors
     layout["title"].update(
         Padding(Align.center(FigletText("Thermonitor"), vertical="middle"), (0, 1)))
@@ -95,8 +95,6 @@ def start_tasks(context):
     # start key listener
     listener_task = Thread(target=context.listener.listen, daemon=True)
     listener_task.start()
-
-
 
 
 if __name__ == "__main__":

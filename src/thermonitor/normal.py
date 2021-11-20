@@ -31,7 +31,7 @@ class NormalState(State):
         }
 
     def _confirm_save(self):
-        self._context.save_state()
+        self._context.save_config()
         self._go_back()
 
     def _default_handle(self, _):
@@ -87,9 +87,9 @@ class NormalState(State):
 
     def _handle_q_mark(self):
         if self._current_tooltip == "initial":
-            layouts = self._context.layouts
-            layouts.get(Layouts.DASH.value).visible = False
-            layouts.get(Layouts.HELP.value).visible = True
+            layout = self._context.layout
+            layout.get(Layouts.DASH.value).visible = False
+            layout.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
         else:
             self._default_handle('?')
@@ -102,9 +102,9 @@ class NormalState(State):
 
     def _handle_t(self):
         if self._current_tooltip == "initial":
-            layouts = self._context.layouts
-            layouts.get(Layouts.DASH.value).visible = False
-            layouts.get(Layouts.SPINNER.value).visible = True
+            layout = self._context.layout
+            layout.get(Layouts.DASH.value).visible = False
+            layout.get(Layouts.SPINNER.value).visible = True
             self._context.change_state("detail")
         else:
             self._default_handle('t')
@@ -137,7 +137,7 @@ class NormalState(State):
         hint.add_column()
         hint.add_column()
         hint.add_row("(t)imeline", "(e)dit mode", "(m)ove mode")
-        hint.add_row("(s)ave", "(u)nit toggle", "(?)help")
+        hint.add_row("(s)ave", "(u)nit", "(?)help")
         return Align.center(hint, vertical="middle")
 
     @staticmethod

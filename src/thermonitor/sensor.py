@@ -89,12 +89,14 @@ class Sensor:
         return ([], [])
 
     def get_sensor_info(self):
-        endpoint = f"https://{HOSTNAME}/sensors/devices/{self._sensor_id}?count=1"
+        endpoint = f"https://{HOSTNAME}/sensors/devices/{self._sensor_id}?single=true"
         headers = {'authorization-token': AUTHORIZATION_TOKEN}
         response = requests.get(endpoint, headers=headers)
         data = response.json()
         if data:
             recent = data.pop()
+            with open('log.txt', 'a') as logfile:
+                logfile.write(str(recent) + '\n\n')
             location = recent['LocationId']['Value'] if 'LocationId' in recent else None
             epoch = float(recent['EpochTime']['Value'])
             temperature = (float(recent['Temperature']['Value'])

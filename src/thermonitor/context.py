@@ -1,5 +1,11 @@
+"""
+Context for the Thermonitor program. Keeps track of the Sensors instance,
+Rich layouts, current state, key listener instance, and temperature unit.
+"""
+from __future__ import annotations
 import json
 import os
+from typing import TYPE_CHECKING, TypedDict
 
 from config import Intervals, Units
 from detail import DetailState
@@ -10,19 +16,32 @@ from normal import NormalState
 from sensor import Sensor
 import utils
 
+if TYPE_CHECKING:
+    from keylistener import KeyListener
+    from rich.layout import Layout
+    from sensors import Sensors
+    from state import State
+
 INTERVALS = [Intervals.HOUR.value, Intervals.DAY.value, Intervals.MINUTE.value]
 UNITS = [Units.F.value, Units.C.value]
 
 class Context:
-    _layouts = None
-    _listener = None
-    _sensors = None
-    _state = None
-    _unit = Units.C.value
+    """Keeps track of key application instances and state
 
-    def __init__(self, file):
-        self._file = file
-        self._states = {
+    Args
+    ----
+        file: str - path of config file location (default "~/.thermonitor.conf")
+    """
+
+    _layout: Layout = None
+    _listener: KeyListener = None
+    _sensors: Sensors = None
+    _state: str = "normal"
+    _unit: str = Units.C.value
+
+    def __init__(self, file) -> None:
+        self._file: str = file
+        self._states: dict[str, State] = {
             "normal": NormalState(self),
             "edit": EditState(self),
             "move": MoveState(self),
@@ -30,14 +49,28 @@ class Context:
             "detail": DetailState(self),
         }
 
-    def change_state(self, state_name):
+    def _apply_config(self, config: Config) -> None:
+        """Applies the loaded config"""
+        if "unit" in config and config["unit"] in UNITS:
+            self._unit = config["unit"]
+        if "interval" in config and config["interval"] in INTERVALS:
+            self._states["detail"].interval = config["interval"]
+        if "sensors" in config:
+            for sensor in config["sensors"]:
+                clean_id = utils.sanitize_id(sensor["id"])
+                clean_label = utils.sanitize_label(sensor["label"])
+                if len(clean_id) > 0:
+                    self._sensors.add_sensor(clean_id, clean_label)
+
+    def change_state(self, state_name: str) -> None:
         state = self._states[state_name]
         state.set_previous_state(self._state)
         self._state = state_name
         state.set_tooltip("initial")
         state.on_mount()
 
-    def _get_sensor_list(self):
+    def _get_sensor_list(self) -> list[dict[str, str]]:
+        """Gets a list of sensor IDs and labels, sorted by grid position"""
         sensors = []
         columns = self._sensors.get_grid().columns
         cells = [list(column.cells) for column in columns]
@@ -53,76 +86,78 @@ class Context:
         return sensors
 
     @property
-    def file(self):
+    def file(self) -> str:
+        """Location of config file"""
         return self._file
 
     @property
-    def layouts(self):
-        return self._layouts
+    def layout(self) -> Layout:
+        """Rich Layout instance"""
+        return self._layout
 
-    @layouts.setter
-    def layouts(self, value):
-        self._layouts = value
+    @layout.setter
+    def layout(self, value: Layout) -> None:
+        """Sets the Rich Layout instance"""
+        self._layout = value
 
     @property
-    def listener(self):
+    def listener(self) -> KeyListener:
+        """Non-blocking KeyListener instance"""
         return self._listener
 
     @listener.setter
-    def listener(self, value):
+    def listener(self, value: KeyListener) -> None:
+        """Sets the KeyListener instance"""
         self._listener = value
 
-    def load_state(self):
+    def load_config(self) -> None:
+        """Loads the configuration from a file into a Dict"""
         file = os.path.expanduser(self._file)
-        state = ""
+        config = None
         if os.path.exists(file):
             with open(file, 'r') as infile:
                 try:
-                    state = json.load(infile)
+                    config = json.load(infile)
                 except ValueError:
                     pass
-        if state:
-            self._set_state(state)
+        if config:
+            self._apply_config(config)
 
-    def on_key(self, key):
+    def on_key(self, key: str) -> None:
+        """Passes a key event to the current state for handling"""
         self._states[self._state].handle_key(key)
 
-    def save_state(self):
+    def save_config(self) -> None:
+        """Creates a Dict with the current
+        configuration, then writes it to a file
+        """
         with open(
             os.path.expanduser(self._file),
             'w'
         ) as outfile:
-            state = dict()
-            state["unit"] = self._unit
-            state["interval"] = self._states["detail"].interval
-            state["sensors"] = self._get_sensor_list()
-            json.dump(state, outfile)
+            unit = self._unit
+            interval = self._states["detail"].interval
+            sensors = self._get_sensor_list()
+            config = Config(unit=unit, interval=interval, sensors=sensors)
+            json.dump(config, outfile)
 
     @property
-    def sensors(self):
+    def sensors(self) -> Sensors:
+        """Sensors instance, a collection of Sensor instances"""
         return self._sensors
 
     @sensors.setter
-    def sensors(self, value):
+    def sensors(self, value: Sensors) -> None:
+        """Sets the Sensors instance"""
         self._sensors = value
 
-    def _set_state(self, state):
-        if "unit" in state and state["unit"] in UNITS:
-            self._unit = state["unit"]
-        if "interval" in state and state["interval"] in INTERVALS:
-            self._states["detail"].interval = state["interval"]
-        if "sensors" in state:
-            for sensor in state["sensors"]:
-                clean_id = utils.sanitize_id(sensor["id"])
-                clean_label = utils.sanitize_label(sensor["label"])
-                if len(clean_id) > 0:
-                    self._sensors.add_sensor(clean_id, clean_label)
-
     @property
-    def state(self):
+    def state(self) -> str:
+        """The name of the current state"""
         return self._state
 
-    def toggle_units(self):
+    def toggle_units(self) -> None:
+        """Toggles between 'C' and 'F'"""
         current_unit = self.unit
         new_unit = (Units.F.value
                     if current_unit == Units.C.value
@@ -131,9 +166,19 @@ class Context:
         self.sensors.set_unit(new_unit)
 
     @property
-    def unit(self):
+    def unit(self) -> str:
+        """Current temperature unit, one of 'C' or 'F'"""
         return self._unit
 
     @unit.setter
     def unit(self, value):
+        """Sets the current temperature unit"""
         self._unit = value
+
+Config = TypedDict('Config',
+    {
+        'unit': str,
+        'interval': str,
+        'sensors': list[dict[str, str]]
+    }
+)

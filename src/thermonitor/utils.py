@@ -77,6 +77,6 @@ def sanitize_id(dirty):
 
 
 class PlotData(NamedTuple):
-    data_x: float
-    data_y: float
-    labels: str
+    data_x: list[float]
+    data_y: list[float]
+    labels: list[str]

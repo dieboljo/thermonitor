@@ -53,14 +53,14 @@ class HelpState(State):
         return Padding(Align.left(table), 2)
 
     def _go_back(self):
-        layouts = self._context.layouts
-        layouts.get(Layouts.HELP.value).visible = False
+        layout = self._context.layout
+        layout.get(Layouts.HELP.value).visible = False
         if (self._previous_state == "normal"
                 or self._previous_state == "edit"
                 or self._previous_state == "move"):
-            layouts.get(Layouts.DASH.value).visible = True
+            layout.get(Layouts.DASH.value).visible = True
         elif self._previous_state == "detail":
-            layouts.get(Layouts.DETAIL.value).visible = True
+            layout.get(Layouts.DETAIL.value).visible = True
         self._context.change_state(self._previous_state)
 
     def _modes_cells(self):
@@ -73,7 +73,7 @@ class HelpState(State):
         return Align.center(table)
 
     def on_mount(self):
-        layout = self._context.layouts.get(Layouts.HELP.value)
+        layout = self._context.layout.get(Layouts.HELP.value)
         layout.update(Group(Align.center(self._any_cell()),
                             self._modes_cells(),
                             self._command_line_cell()))

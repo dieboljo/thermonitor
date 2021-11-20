@@ -57,9 +57,9 @@ class MoveState(State):
 
     def _handle_q_mark(self):
         if self._current_tooltip == "initial":
-            layouts = self._context.layouts
-            layouts.get(Layouts.DASH.value).visible = False
-            layouts.get(Layouts.HELP.value).visible = True
+            layout = self._context.layout
+            layout.get(Layouts.DASH.value).visible = False
+            layout.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
         else:
             self._default_handle('?')

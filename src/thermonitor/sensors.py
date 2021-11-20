@@ -4,13 +4,12 @@ import time
 from rich.console import Console, ConsoleOptions, RenderResult
 from rich.table import Table
 
-from config import Colors, Units, WIDTH
+from config import Colors, WIDTH
 import utils
 from sensor import PanelDimensions, Sensor
 
 
 class Sensors:
-
     def __init__(self, context, stop_event):
         self._color = Colors.PURPLE.value
         self._context = context
@@ -175,9 +174,6 @@ class Sensors:
         self._color = color
         if isinstance(selected, Sensor):
             selected.panel.border_style = self._color
-
-    def set_context(self, context):
-        self._context = context
 
     def _set_selected(self, x, y):
         self._cursor_position = (x, y)

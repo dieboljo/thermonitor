@@ -1,0 +1,146 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  telemetry
+
+  SAM Template for telemetry
+
+Resources:
+  TelemetryApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Auth:
+        Authorizers:
+          MyLambdaTokenAuthorizer:
+            FunctionPayloadType: TOKEN
+            FunctionArn:
+              Fn::GetAtt:
+                - MyAuthFunction
+                - Arn
+            Identity:
+              Header: Authorization
+              ValidationExpression: Bearer .*
+              ReauthorizationEvery: 300
+        DefaultAuthorizer: MyLambdaTokenAuthorizer
+      Name: Telemetry
+      StageName: dev
+
+  MyAuthFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: functions/myauth
+      Handler: myauth
+      Runtime: go1.x
+      Architectures:
+        - x86_64
+
+  ProjectDataFunction:
+    Type: AWS::Serverless::Function
+    Policies: 
+      - DynamoDBReadPolicy:
+          TableName: !Ref DdbTable
+      - DynamoDBWritePolicy:
+          TableName: !Ref DdbTable
+    Properties:
+      CodeUri: functions/projectdata
+      Handler: projectdata
+      Runtime: go1.x
+      Architectures:
+        - x86_64
+      Events:
+        GetData:
+          Type: Api
+          Properties:
+            Method: get
+            Path: /{project}/{epochTime}
+            RequestParameters:
+              - method.request.path.project:
+                  Required: true
+                  Caching: true
+              - method.request.path.epochTime:
+                  Required: false
+                  Caching: true
+            RestApiId: !Ref TelemetryApi
+        PostData:
+          Type: Api
+          Properties:
+            Method: post
+            Path: /{project}
+            RequestParameters:
+              - method.request.path.project:
+                  Required: true
+                  Caching: true
+            RestApiId: !Ref TelemetryApi
+
+  DdbTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        -
+          AttributeName: "ProjectName"
+          AttributeType: "S"
+        -
+          AttributeName: "EpochTime"
+          AttributeType: "N"
+        -
+          AttributeName: "DeviceId"
+          AttributeType: "N"
+        -
+          AttributeName: "DeviceLocation"
+          AttributeType: "S"
+      BillingMode: PROVISIONED
+      GlobalSecondaryIndexes:
+        -
+          IndexName: "ByDevice"
+          KeySchema:
+            -
+              AttributeName: "ProjectName"
+              KeyType: "HASH"
+            -
+              AttributeName: "DeviceId"
+              KeyType: "RANGE"
+          Projection:
+            ProjectionType: "ALL"
+          ProvisionedThroughput:
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+      KeySchema:
+        -
+          AttributeName: "ProjectName"
+          KeyType: "HASH"
+        -
+          AttributeName: "EpochTime"
+          KeyType: "RANGE"
+      LocalSecondaryIndexes:
+        -
+          IndexName: "ByLocation"
+          KeySchema:
+            -
+              AttributeName: "ProjectName"
+              KeyType: "HASH"
+            -
+              AttributeName: "DeviceLocation"
+              KeyType: "RANGE"
+          Projection:
+            ProjectionType: "ALL"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 10
+        WriteCapacityUnits: 10
+      TableName: "TelemetryData"
+
+Outputs:
+ # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  DdbTable:
+    Description: "Dynamo DB Table"
+    Value: !GetAtt DdbTable.Arn
+  MyAuthFunction:
+    Description: "Lambda Token Authorizer"
+    Value: !GetAtt MyAuthFunction.Arn
+  ProjectDataFunction:
+    Description: "First Lambda Function ARN"
+    Value: !GetAtt ProjectDataFunction.Arn
+  TelemetryApi:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${TelemetryApi}.execute-api.${AWS::Region}.amazonaws.com/dev"
