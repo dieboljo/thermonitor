@@ -7,6 +7,7 @@ import json
 import os
 from typing import TYPE_CHECKING, TypedDict
 
+import utils
 from config import Intervals, Units
 from detail import DetailState
 from edit import EditState
@@ -14,13 +15,15 @@ from help import HelpState
 from move import MoveState
 from normal import NormalState
 from sensor import Sensor
-import utils
 
 if TYPE_CHECKING:
     from keylistener import KeyListener
     from rich.layout import Layout
     from sensors import Sensors
     from state import State
+
+Config = TypedDict('Config',
+    { 'unit': str, 'interval': str, 'sensors': list[dict[str, str]] })
 
 INTERVALS = [Intervals.HOUR.value, Intervals.DAY.value, Intervals.MINUTE.value]
 UNITS = [Units.F.value, Units.C.value]
@@ -30,7 +33,8 @@ class Context:
 
     Args
     ----
-        file: str - path of config file location (default "~/.thermonitor.conf")
+        file: str
+            path of config file location (default "~/.thermonitor.conf")
     """
 
     _layout: Layout = None
@@ -39,8 +43,8 @@ class Context:
     _state: str = "normal"
     _unit: str = Units.C.value
 
-    def __init__(self, file) -> None:
-        self._file: str = file
+    def __init__(self, file: str):
+        self._file = file
         self._states: dict[str, State] = {
             "normal": NormalState(self),
             "edit": EditState(self),
@@ -49,7 +53,7 @@ class Context:
             "detail": DetailState(self),
         }
 
-    def _apply_config(self, config: Config) -> None:
+    def _apply_config(self, config: Config):
         """Applies the loaded config"""
         if "unit" in config and config["unit"] in UNITS:
             self._unit = config["unit"]
@@ -62,7 +66,7 @@ class Context:
                 if len(clean_id) > 0:
                     self._sensors.add_sensor(clean_id, clean_label)
 
-    def change_state(self, state_name: str) -> None:
+    def change_state(self, state_name: str):
         state = self._states[state_name]
         state.set_previous_state(self._state)
         self._state = state_name
@@ -96,7 +100,7 @@ class Context:
         return self._layout
 
     @layout.setter
-    def layout(self, value: Layout) -> None:
+    def layout(self, value: Layout):
         """Sets the Rich Layout instance"""
         self._layout = value
 
@@ -106,11 +110,11 @@ class Context:
         return self._listener
 
     @listener.setter
-    def listener(self, value: KeyListener) -> None:
+    def listener(self, value: KeyListener):
         """Sets the KeyListener instance"""
         self._listener = value
 
-    def load_config(self) -> None:
+    def load_config(self):
         """Loads the configuration from a file into a Dict"""
         file = os.path.expanduser(self._file)
         config = None
@@ -123,11 +127,11 @@ class Context:
         if config:
             self._apply_config(config)
 
-    def on_key(self, key: str) -> None:
+    def on_key(self, key: str):
         """Passes a key event to the current state for handling"""
         self._states[self._state].handle_key(key)
 
-    def save_config(self) -> None:
+    def save_config(self):
         """Creates a Dict with the current
         configuration, then writes it to a file
         """
@@ -147,7 +151,7 @@ class Context:
         return self._sensors
 
     @sensors.setter
-    def sensors(self, value: Sensors) -> None:
+    def sensors(self, value: Sensors):
         """Sets the Sensors instance"""
         self._sensors = value
 
@@ -156,7 +160,7 @@ class Context:
         """The name of the current state"""
         return self._state
 
-    def toggle_units(self) -> None:
+    def toggle_units(self):
         """Toggles between 'C' and 'F'"""
         current_unit = self.unit
         new_unit = (Units.F.value
@@ -174,11 +178,3 @@ class Context:
     def unit(self, value):
         """Sets the current temperature unit"""
         self._unit = value
-
-Config = TypedDict('Config',
-    {
-        'unit': str,
-        'interval': str,
-        'sensors': list[dict[str, str]]
-    }
-)

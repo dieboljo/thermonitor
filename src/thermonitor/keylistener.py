@@ -1,13 +1,37 @@
+"""
+KeyListener manages a queue of keypress events,
+and processes them in turn with the supplied function.
+It must be run on its own thread.
+"""
+from __future__ import annotations
 from queue import Empty, Queue
+from typing import Callable, TYPE_CHECKING
 
 import nonblocking
 
+if TYPE_CHECKING:
+    from threading import Event, Lock
 
 class KeyListener:
-    def __init__(self, on_press, stop_event, lock=None):
+    """Key listener agent
+
+    Args
+    ----
+        on_press: (str | int)
+            key handler function, will be passed a character
+            or integer representing the Unicode code of a character
+        stop_event: threading.Event
+            an event object that sends a signal to other waiting threads
+        lock: threading.Lock
+            a lock primitive for concurrency control
+    """
+    def __init__(self,
+                 on_press: Callable[[str|int], None],
+                 stop_event: Event,
+                 lock: Lock=None):
         self._lock = lock
         self._on_press = on_press
-        self._queue = Queue()
+        self._queue: Queue = Queue()
         self._stop_event = stop_event
 
     def handle_char(self):

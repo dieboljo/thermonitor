@@ -1,6 +1,15 @@
+"""
+The main entry point to the Thermonitor application.
+This displays a dashboard of sensor display panels with live updates.
+The cursor is used to select a sensor, and key commands are used to
+perform actions on it: add/move/remove/edit or view detailed timeline
+and location data.
+"""
+from __future__ import annotations
 import argparse
 from threading import Event, Thread
 import time
+from typing import TYPE_CHECKING
 
 from rich.align import Align
 from rich.layout import Layout
@@ -13,7 +22,13 @@ from figlettext import FigletText
 from keylistener import KeyListener
 from sensors import Sensors
 
+if TYPE_CHECKING:
+    from argparse import Namespace
+
 def main():
+    """Runs program until stop event is raised via 'Ctrl-c'
+    or one of the designated keys
+    """
     stop_event = Event()
     try:
         run(stop_event)
@@ -22,7 +37,7 @@ def main():
     finally:
         stop_event.set()
 
-def run(stop_event):
+def run(stop_event: Event):
     args = parse_args()
 
     layout = build_layout()
@@ -33,13 +48,14 @@ def run(stop_event):
 
     start_tasks(context)
 
-    # start live display
-    with Live(layout, refresh_per_second=20):
+    # start the live display
+    with Live(layout, refresh_per_second=50):
         while True:
             context.listener.handle_char()
-            time.sleep(.05)
+            time.sleep(.02)
 
-def build_layout():
+def build_layout() -> Layout:
+    """Builds the layout skeleton to be rendered by rich"""
     layout = Layout()
 
     layout.split(Layout(name=Layouts.HEADER.value, ratio=1, minimum_size=4),
@@ -61,7 +77,8 @@ def build_layout():
                                     Layout(name=Layouts.HUMIDITY_TIMELINE.value, ratio=1))
     return layout
 
-def configure_context(args, layout, stop_event):
+def configure_context(args: Namespace, layout: Layout, stop_event: Event) -> Context:
+    """Creates the application context, manages state"""
     context = Context(args.file)
     context.layout = layout
     sensors = Sensors(context, stop_event)
@@ -74,20 +91,23 @@ def configure_context(args, layout, stop_event):
     context.load_config()
     return context
 
-def parse_args():
+def parse_args() -> Namespace:
+    """Gets the command line arguments"""
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", '-f', help="file location for program state", \
                         default="~/.thermonitor.conf")
     return parser.parse_args()
 
-def populate_layout(context):
+def populate_layout(context: Context):
+    """Fills the layout skeleton with objects to render"""
     layout = context.layout
     sensors = context.sensors
     layout["title"].update(
         Padding(Align.center(FigletText("Thermonitor"), vertical="middle"), (0, 1)))
     layout["dash"].update(Align.center(sensors))
 
-def start_tasks(context):
+def start_tasks(context: Context):
+    """Starts the sensor update thread and the key listener thread"""
     # start task to update sensor data
     sensor_task = Thread(target=context.sensors.run, daemon=True)
     sensor_task.start()

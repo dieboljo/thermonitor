@@ -1,7 +1,6 @@
 from enum import Enum
 from typing import NamedTuple
 
-WIDTH = 3
 
 class Colors(Enum):
     CYAN = "cyan"

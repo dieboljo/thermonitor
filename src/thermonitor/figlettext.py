@@ -1,3 +1,9 @@
+"""
+FigletText generates ascii block lettering of given text.
+In addition, block size adapts to the dimensions of the console.
+"""
+from __future__ import annotations
+
 from rich.console import Console, ConsoleOptions, RenderResult
 from rich.text import Text
 
@@ -11,7 +17,7 @@ except ImportError:
 class FigletText:
     """A renderable to generate figlet text that adapts to fit the container."""
 
-    def __init__(self, text: str) -> None:
+    def __init__(self, text: str):
         self.text = text
 
     def __rich_console__(
@@ -29,7 +35,8 @@ class FigletText:
             yield Text(font.renderText(self.text).rstrip("\n"), style="bold")
 
     @staticmethod
-    def _calculate_font_name(height, width):
+    def _calculate_font_name(height: int, width: int) -> str:
+        """Resizes font based on console dimensions"""
         if height < 5 or width < 50:
             return "mini"
         if height < 6 or width < 65:

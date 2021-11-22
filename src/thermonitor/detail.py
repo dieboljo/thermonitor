@@ -32,9 +32,10 @@ class DetailState(State):
 
     Args
     ----
-        context: Context - the current Context instance of the process
+        context: thermonitor.Context
+            the current Context instance of the process
     """
-    def __init__(self, context: Context) -> None:
+    def __init__(self, context: Context):
         super().__init__(context)
         self._key_handlers: dict[int|str, Callable[[], None]] = {
             27: self._handle_esc,
@@ -114,7 +115,7 @@ class DetailState(State):
         plot.set_color("red")
         return plot
 
-    def _default_handle(self, key: str) -> None:
+    def _default_handle(self, key: str):
         pass
 
     def _format_location_info(self, info: LocationInfo) -> FormattedLocationInfo:
@@ -151,7 +152,7 @@ class DetailState(State):
                                 wind_direction, wind_speed, int(zip_code))
         return None
 
-    def _get_new_data(self) -> None:
+    def _get_new_data(self):
         """Retrieves latest sensor data, info about sensor's location,
         and sensor data over different time periods"""
         intervals = [Intervals.DAY.value, Intervals.HOUR.value, Intervals.MINUTE.value]
@@ -159,7 +160,7 @@ class DetailState(State):
         self._location_info = self._refresh_location_info(self._sensor_info.location_id)
         self._plot_data = self._context.sensors.update_timeline(intervals)
 
-    def _go_back(self) -> None:
+    def _go_back(self):
         """Goes back to dashboard"""
         self._clear_details()
         layout = self._context.layout
@@ -167,7 +168,7 @@ class DetailState(State):
         layout.get(Layouts.DASH.value).visible = True
         self._context.change_state("normal")
 
-    def _clear_details(self) -> None:
+    def _clear_details(self):
         """Clears the current sensor's data from the screen"""
         layout = self._context.layout
         layout.get(Layouts.TEMPERATURE_TIMELINE.value).update("")
@@ -175,22 +176,22 @@ class DetailState(State):
         layout.get(Layouts.SENSOR_INFO.value).update("")
         layout.get(Layouts.LOCATION_INFO.value).update("")
 
-    def _handle_d(self) -> None:
+    def _handle_d(self):
         """Key handler, displays plot data aggregated by day"""
         self._interval = Intervals.DAY.value
         self._render_details()
 
-    def _handle_h(self) -> None:
+    def _handle_h(self):
         """Key handler, displays plot data aggregated by hour"""
         self._interval = Intervals.HOUR.value
         self._render_details()
 
-    def _handle_m(self) -> None:
+    def _handle_m(self):
         """Key handler, displays plot data aggregated by minute"""
         self._interval = Intervals.MINUTE.value
         self._render_details()
 
-    def _handle_q_mark(self) -> None:
+    def _handle_q_mark(self):
         """Key handler, shows help screen"""
         if self._current_tooltip == "initial":
             layout = self._context.layout
@@ -200,12 +201,12 @@ class DetailState(State):
         else:
             self._default_handle('?')
 
-    def _handle_r(self) -> None:
+    def _handle_r(self):
         """Key handler, refreshes data of currently displayed sensor"""
         self._refresh_details()
 
-    def _handle_u(self) -> None:
-        """Key handler, toggles temperature units ('C' or 'F')"""
+    def _handle_u(self):
+        """Key handler, toggles temperature units ['C' | 'F']"""
         self._context.toggle_units()
         self._render_details()
 
@@ -215,24 +216,24 @@ class DetailState(State):
         return self._interval
 
     @interval.setter
-    def interval(self, value: str) -> None:
+    def interval(self, value: str):
         """Sets current plot interval, one of 'minute', 'hour', or 'day'"""
         self._interval = value
 
-    def on_mount(self) -> None:
-        """Initialize view if coming from dashboard,
+    def on_mount(self):
+        """Initialize view and refresh data if coming from dashboard,
         skip if coming from help screen"""
         if self._previous_state == "normal":
             self._clear_details()
             self._refresh_details()
 
-    def _render_details(self) -> None:
+    def _render_details(self):
         self._render_sensor_info()
         self._render_location_info()
         self._render_temperature_timeline()
         self._render_humidity_timeline()
 
-    def _render_humidity_timeline(self) -> None:
+    def _render_humidity_timeline(self):
         """Creates humidity plot with current data and currently selected interval"""
         data_x, data_y, labels = self._plot_data[self._interval]["humidities"]
         layout = self._context.layout.get(Layouts.HUMIDITY_TIMELINE.value)
@@ -248,7 +249,22 @@ class DetailState(State):
             elif self._interval == Intervals.DAY.value:
                 layout.update(Align.center(Text("No daily humidity data"), vertical="middle"))
 
-    def _render_location_info(self) -> None:
+    @staticmethod
+    def render_initial_tooltip() -> RenderableType:
+        """Creates Rich Table with key hints for current mode"""
+        hint = Table(
+            box=None,
+            title="TIMELINE MODE",
+            show_header=True,
+            show_edge=False,
+            title_style=f"bold {Colors.PINK.value}",
+        )
+        hint.add_column()
+        hint.add_row("(m)inutely  (h)ourly  (d)aily  (u)nit")
+        hint.add_row("(r)efresh   (?)help   (q)uit timeline mode")
+        return Align.center(hint, vertical="middle")
+
+    def _render_location_info(self):
         """Creates panel with sensor location info"""
         layout = self._context.layout.get(Layouts.LOCATION_INFO.value)
         info = self._location_info
@@ -258,14 +274,14 @@ class DetailState(State):
         else:
             layout.update(Align.center("No location data", vertical="middle"))
 
-    def _render_sensor_info(self) -> None:
+    def _render_sensor_info(self):
         """Creates panel with latest sensor data"""
         layout = self._context.layout.get(Layouts.SENSOR_INFO.value)
         info = self._sensor_info
         table = self._build_sensor_info_table(info)
         layout.update(Align.center(table, vertical="middle"))
 
-    def _render_temperature_timeline(self) -> None:
+    def _render_temperature_timeline(self):
         """Creates temperature plot with current data and currently selected interval"""
         data_x, data_y, labels = self._plot_data[self._interval]["temperatures"]
         layout = self._context.layout.get(Layouts.TEMPERATURE_TIMELINE.value)
@@ -281,24 +297,7 @@ class DetailState(State):
             elif self._interval ==Intervals.DAY.value:
                 layout.update(Align.center(Text("No daily temperature data"), vertical="middle"))
 
-    @staticmethod
-    def render_initial_tooltip() -> RenderableType:
-        """Creates Rich Table with key hints for current mode"""
-        hint = Table(
-            box=None,
-            title="TIMELINE MODE",
-            show_header=True,
-            show_edge=False,
-            title_style=f"bold {Colors.PINK.value}",
-        )
-        hint.add_column()
-        hint.add_column()
-        hint.add_column()
-        hint.add_row("(m)inutely", "(h)ourly", "(d)aily")
-        hint.add_row("(u)nit", "(r)efresh", "(q)uit")
-        return Align.center(hint, vertical="middle")
-
-    def _refresh_details(self) -> None:
+    def _refresh_details(self):
         """Displays spinner while fetching new data"""
         layout = self._context.layout
         status = Status(status="",

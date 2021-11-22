@@ -17,13 +17,13 @@ from state import State
 if TYPE_CHECKING:
     from context import Context
 
-VALID_ID_CHARS = "abcdefghijklmnopqrstuvwxyz1234567890"
-VALID_LABEL_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'-"
-ID_WARNINGS = ["blank_id", "duplicate_id"]
-
 class EditState(State):
     """Dashboard edit mode"""
-    def __init__(self, context: Context) -> None:
+    VALID_ID_CHARS = "abcdefghijklmnopqrstuvwxyz1234567890"
+    VALID_LABEL_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'-"
+    ID_WARNINGS = ["blank_id", "duplicate_id"]
+
+    def __init__(self, context: Context):
         super().__init__(context)
         self._cursor_color: str = Colors.RED.value
         self._key_handlers: dict[int|str, Callable[[], None]] = {
@@ -43,7 +43,7 @@ class EditState(State):
             'r': self._handle_r,
             'y': self._handle_y,
         }
-        self._tooltips: dict[str, Callable[[], None]] = {
+        self._tooltips: dict[str, Callable[[], RenderableType]] = {
             "blank_id": self._render_blank_id_tooltip,
             "delete": self._render_delete_tooltip,
             "duplicate_id": self._render_duplicate_id_tooltip,
@@ -52,19 +52,19 @@ class EditState(State):
             "label_prompt": self._render_label_prompt_tooltip,
             "rename_prompt": self._render_rename_prompt_tooltip,
         }
-        self._id_input = Input(VALID_ID_CHARS)
-        self._label_input = Input(VALID_LABEL_CHARS)
-        self._rename_input = Input(VALID_LABEL_CHARS)
+        self._id_input = Input(self.VALID_ID_CHARS)
+        self._label_input = Input(self.VALID_LABEL_CHARS)
+        self._rename_input = Input(self.VALID_LABEL_CHARS)
 
-    def _confirm_delete(self) -> None:
+    def _confirm_delete(self):
         self._context.sensors.remove_sensor()
         self._go_back()
 
-    def _default_handle(self, key: int|str) -> None:
+    def _default_handle(self, key: int|str):
         """Key handler, handles keys without special functions
         or keys pressed when prompt is displayed
         """
-        if self._current_tooltip in ID_WARNINGS:
+        if self._current_tooltip in self.ID_WARNINGS:
             self._go_back()
         elif isinstance(key, str):
             if self._current_tooltip == "label_prompt":
@@ -77,7 +77,7 @@ class EditState(State):
                 self._rename_input.append_clean(key)
                 self.set_tooltip("rename_prompt")
 
-    def _go_back(self) -> None:
+    def _go_back(self):
         """Returns to normal dashboard mode"""
         if self._current_tooltip == "delete":
             self.set_tooltip("initial")
@@ -97,14 +97,14 @@ class EditState(State):
         else:
             self._context.change_state("normal")
 
-    def _handle_a(self) -> None:
+    def _handle_a(self):
         """Key handler, signals intent to add sensor to dashboard"""
         if self._current_tooltip == "initial":
             self.set_tooltip("label_prompt")
         else:
             self._default_handle('a')
 
-    def _handle_backspace(self) -> None:
+    def _handle_backspace(self):
         """Key handler for input prompts"""
         if self._current_tooltip == "label_prompt":
             self._label_input.pop()
@@ -118,14 +118,14 @@ class EditState(State):
         else:
             self._default_handle(127)
 
-    def _handle_d(self) -> None:
+    def _handle_d(self):
         """Key handler, signals intent to remove sensor from dashboard"""
         if self._current_tooltip == "initial":
             self.set_tooltip("delete")
         else:
             self._default_handle('d')
 
-    def _handle_enter(self) -> None:
+    def _handle_enter(self):
         """Key handler, submits input or returns to normal mode"""
         if self._current_tooltip == "label_prompt":
             self.set_tooltip("id_prompt")
@@ -138,42 +138,42 @@ class EditState(State):
         else:
             self._default_handle(10)
 
-    def _handle_h(self) -> None:
+    def _handle_h(self):
         """Key handler, moves cursor left"""
         if self._current_tooltip == "initial":
             self._context.sensors.move_cursor(-1, 0)
         else:
             self._default_handle('h')
 
-    def _handle_j(self) -> None:
+    def _handle_j(self):
         """Key handler, moves cursor down"""
         if self._current_tooltip == "initial":
             self._context.sensors.move_cursor(0, 1)
         else:
             self._default_handle('j')
 
-    def _handle_k(self) -> None:
+    def _handle_k(self):
         """Key handler, moves cursor up"""
         if self._current_tooltip == "initial":
             self._context.sensors.move_cursor(0, -1)
         else:
             self._default_handle('k')
 
-    def _handle_l(self) -> None:
+    def _handle_l(self):
         """Key handler, moves cursor right"""
         if self._current_tooltip == "initial":
             self._context.sensors.move_cursor(1, 0)
         else:
             self._default_handle('l')
 
-    def _handle_n(self) -> None:
+    def _handle_n(self):
         """Key handler, 'no' answer to confirmation prompt"""
         if self._current_tooltip == "delete":
             self._go_back()
         else:
             self._default_handle('n')
 
-    def _handle_q(self) -> None:
+    def _handle_q(self):
         """Key handler, 'quit'"""
         if (self._current_tooltip == "delete"
                 or self._current_tooltip == "initial"
@@ -182,7 +182,7 @@ class EditState(State):
         else:
             self._default_handle('q')
 
-    def _handle_q_mark(self) -> None:
+    def _handle_q_mark(self):
         """Key handler, show help screen"""
         if self._current_tooltip == "initial":
             layout = self._context.layout
@@ -192,14 +192,14 @@ class EditState(State):
         else:
             self._default_handle('?')
 
-    def _handle_r(self) -> None:
+    def _handle_r(self):
         """Key handler, signal intent to give sensor a new label"""
         if self._current_tooltip == "initial":
             self.set_tooltip("rename_prompt")
         else:
             self._default_handle('r')
 
-    def _handle_space(self) -> None:
+    def _handle_space(self):
         """Key handler when labelling or renaming sensor"""
         if self._current_tooltip == "label_prompt":
             self._label_input.append(' ')
@@ -207,17 +207,17 @@ class EditState(State):
         elif self._current_tooltip == "rename_prompt":
             self._rename_input.append(' ')
             self.set_tooltip("rename_prompt")
-        elif self._current_tooltip in ID_WARNINGS:
+        elif self._current_tooltip in self.ID_WARNINGS:
             self._go_back()
 
-    def _handle_y(self) -> None:
+    def _handle_y(self):
         """Key handler, 'yes' answer to confirmation prompt"""
         if self._current_tooltip == "delete":
             self._confirm_delete()
         else:
             self._default_handle('y')
 
-    def on_mount(self) -> None:
+    def on_mount(self):
         """Change panel border color upon switching to edit mode"""
         self._context.sensors.set_color(self._cursor_color)
 
@@ -267,10 +267,8 @@ class EditState(State):
             title_style=f"bold {Colors.RED.value}",
         )
         hint.add_column()
-        hint.add_column()
-        hint.add_column()
-        hint.add_row("(a)dd", "(d)elete", "(r)ename")
-        hint.add_row("(?)help", "", "(Enter|q)uit")
+        hint.add_row("(a)dd     (d)elete   (r)ename")
+        hint.add_row("(?)help   (Enter|q)uit edit mode")
         return Align.center(hint, vertical="middle")
 
     def _render_label_prompt_tooltip(self) -> RenderableType:
@@ -291,7 +289,7 @@ class EditState(State):
         )
         return prompt
 
-    def _submit_create(self) -> None:
+    def _submit_create(self):
         """Creates new sensor with stored input"""
         id_input = self._id_input.get()
         unique_id = self._context.sensors.is_unique_id(id_input)
@@ -309,7 +307,7 @@ class EditState(State):
                 sensors.add_sensor(sensor_id, sensor_label)
             self._go_back()
 
-    def _submit_rename(self) -> None:
+    def _submit_rename(self):
         """Renames selected sensor with stored input"""
         sensors = self._context.sensors
         new_sensor_label = self._rename_input.get().strip()

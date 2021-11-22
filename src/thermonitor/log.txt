@@ -66,3 +66,1411 @@
 
 {'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419082'}, 'Humidity': {'Value': '25'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '96'}}
 
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476963'}, 'Humidity': {'Value': '34.066486'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.0242'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476970'}, 'Humidity': {'Value': '34.060097'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.03183'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476970'}, 'Humidity': {'Value': '34.060097'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.03183'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476977'}, 'Humidity': {'Value': '34.044266'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.003983'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476984'}, 'Humidity': {'Value': '34.052277'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.030685'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476984'}, 'Humidity': {'Value': '34.052277'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.030685'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476991'}, 'Humidity': {'Value': '34.028816'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.055481'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476991'}, 'Humidity': {'Value': '34.028816'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.055481'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+
+{'DeviceId': {'Value': 'test'}, 'EpochTime': {'Value': '1637419097'}, 'Humidity': {'Value': '58'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#test'}, 'Temperature': {'Value': '39'}}
+
+{'DeviceId': {'Value': 'sensor'}, 'EpochTime': {'Value': '1637476998'}, 'Humidity': {'Value': '33.96473'}, 'LocationId': {'Value': '45203'}, 'ProjectId': {'Value': 'sensors'}, 'ProjectId#DeviceId': {'Value': 'sensors#sensor'}, 'Temperature': {'Value': '24.108887'}}
+

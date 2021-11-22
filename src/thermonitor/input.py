@@ -1,5 +1,17 @@
+"""
+Input manages values retrieved from input prompts.
+"""
+from __future__ import annotations
+
 class Input:
-    def __init__(self, valid_chars):
+    """Manages input data
+
+    Args
+    ----
+        valid_chars: str
+            string sequence of acceptable characters
+    """
+    def __init__(self, valid_chars: str):
         self._chars = ""
         self._valid_chars = valid_chars
 
@@ -11,7 +23,7 @@ class Input:
             if char == valid:
                 self.append(char)
 
-    def get(self):
+    def get(self) -> str:
         return self._chars
 
     def pop(self):

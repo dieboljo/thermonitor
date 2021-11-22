@@ -1,5 +1,12 @@
-from __future__ import print_function
+"""
+This module puts the terminal into cbreak mode, so that characters
+can be read one at a time, and restores the old settings on exit.
+It uses different tools for Windows and Unix.
+"""
+from __future__ import annotations, print_function
+
 try:
+    """Windows configuration"""
     import msvcrt
 
     def key_pressed():
@@ -28,9 +35,11 @@ except:
             return select.select([sys.stdin], [], [], 0) == ([sys.stdin], [], [])
 
         def read_key():
+            """Waits for and reads one character from stdin"""
             return sys.stdin.read(1)
 
         def restore_settings():
+            """Restores original tty settings"""
             termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
 
 
