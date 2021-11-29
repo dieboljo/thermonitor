@@ -1,4 +1,7 @@
-//! Linux I2C Demo
+//! # Sensor
+//! 
+//! A simple program to access an I2C temperature/humidity sensor
+//! and push the data to an AWS DynamoDB table.
 
 use {
     aht20::*,
@@ -19,6 +22,7 @@ struct PostData {
 }
 
 impl Serialize for PostData {
+    /// Defines how a PostData object is serialized for transmission
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where
         S: Serializer,
