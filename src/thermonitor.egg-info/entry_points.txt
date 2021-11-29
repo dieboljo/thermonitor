@@ -1,3 +1,0 @@
-[console_scripts]
-thermonitor = thermonitor:main
-
