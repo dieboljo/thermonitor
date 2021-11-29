@@ -19,6 +19,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-aviader/node_modules/
-sensor/target/
-thermonitor/telemetry/
+js/aviader/node_modules/
+rs/sensor/target/
+py/src/thermonitor.egg-info
+go/bin
+go/pkg
