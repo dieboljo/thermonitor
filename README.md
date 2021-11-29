@@ -1,12 +1,8 @@
-# Thermonitor
-## A TUI IoT sensor dashboard
+# Thermonitor Complete Project Files
+## Includes dashboard client, telemetry service, weather service, and sensor client program
 
-### Steps to install:
-- conda create --name thermonitor --file requirements.txt
-- conda activate thermonitor
-- python3 -m pip install .
-- python3 -m pip show thermonitor
-- binary is located in 'bin' folder of thermonitor env (sibling to 'lib' folder above)
-- symlink binary from step above to path, or add to path
-- OPTIONAL: run aviader server (`node app.js` in aviader folder)
-- thermonitor
+### Directory:
+- dashboard client: `py/src/thermonitor`
+- telemetry service: `go/src/telemetry`
+- weather service: `js/aviader` (Kirthi's service)
+- sensor client: `rs/sensor` (auxiliary)
