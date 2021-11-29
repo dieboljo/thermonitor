@@ -2,7 +2,7 @@
 ## A TUI IoT sensor dashboard
 
 ### Steps to install:
-- conda create --name thermonitor --file requirements.txt
+- conda env create --file environment.yaml
 - conda activate thermonitor
 - python3 -m pip install .
 - python3 -m pip show thermonitor
