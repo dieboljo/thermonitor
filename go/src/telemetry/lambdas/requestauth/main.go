@@ -9,8 +9,12 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-// Help function to generate an IAM policy
-func generatePolicy(principalId, effect, resource string) events.APIGatewayCustomAuthorizerResponse {
+// generatePolicy is a helper function to generate an IAM policy post-authorization.
+func generatePolicy(
+	principalId,
+	effect,
+	resource string,
+) events.APIGatewayCustomAuthorizerResponse {
 	authResponse := events.APIGatewayCustomAuthorizerResponse{PrincipalID: principalId}
 
 	if effect != "" && resource != "" {
@@ -26,16 +30,18 @@ func generatePolicy(principalId, effect, resource string) events.APIGatewayCusto
 		}
 	}
 
-	// Optional output with custom properties of the String, Number or Boolean type.
-	authResponse.Context = map[string]interface{}{
-		"stringKey":  "stringval",
-		"numberKey":  123,
-		"booleanKey": true,
-	}
 	return authResponse
 }
 
-func handleRequest(ctx context.Context, event events.APIGatewayCustomAuthorizerRequestTypeRequest) (events.APIGatewayCustomAuthorizerResponse, error) {
+// requestAuthorizer is called by AWS API Gateway to authorize requests before they
+// are sent to the endpoint's associated Lambda function.
+// The function associates the value provided in the
+// 'authorization-token' field to the ProjectId gathered from the path.
+// In this way, a single DynamoDB table can be shared between multiple projects.
+func requestAuthorizer(
+	ctx context.Context,
+	event events.APIGatewayCustomAuthorizerRequestTypeRequest,
+) (events.APIGatewayCustomAuthorizerResponse, error) {
 	token := event.Headers["authorization-token"]
 	fmt.Println(event.Headers)
 	project := event.PathParameters["ProjectId"]
@@ -50,12 +56,13 @@ func handleRequest(ctx context.Context, event events.APIGatewayCustomAuthorizerR
 	case token == "deny":
 		return generatePolicy("user", "Deny", event.MethodArn), nil
 	case token == "unauthorized":
-		return events.APIGatewayCustomAuthorizerResponse{}, errors.New("Unauthorized") // Return a 401 Unauthorized response
+		// Return a 401 Unauthorized response
+		return events.APIGatewayCustomAuthorizerResponse{}, errors.New("Unauthorized")
 	default:
 		return events.APIGatewayCustomAuthorizerResponse{}, errors.New("Error: Invalid token")
 	}
 }
 
 func main() {
-	lambda.Start(handleRequest)
+	lambda.Start(requestAuthorizer)
 }

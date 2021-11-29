@@ -17,7 +17,15 @@ import (
 	"telemetry/utils"
 )
 
-func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+// projectEndpointHandler is an AWS Lambda function that is called by AWS API Gateway.
+// For GET requests, the handler fetches project data from
+// AWS DynamoDB according to a single path parameter and optional query string parameters.
+// For POST requests, the handler puts new data into the same DynamoDB table according to the
+// same path parameter and the fields included in the POST body. In addition to the ProjectId
+// gathered from the path, the EpochTime and DeviceId fields are also required in the POST body.
+func projectEndpointHandler(
+	request events.APIGatewayProxyRequest,
+) (events.APIGatewayProxyResponse, error) {
 	cfg, err := config.LoadDefaultConfig(context.TODO())
 	if err != nil {
 		log.Fatalf("Failed to load configuration, %v", err)
@@ -36,6 +44,9 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 			},
 		}
 
+		// If the 'single' query string parameter exists and is truthy, fetch a single value only.
+		// This value is the most recent project data or the most recent in the chosen time frame,
+		// if supplied with the 'start' and/or 'end' query parameters.
 		singleStr, singleOk := request.QueryStringParameters["single"]
 		single := false
 		if singleOk {
@@ -85,8 +96,10 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 		var items []map[string]types.AttributeValue
 		items = append(items, output.Items...)
-		lastEvaluatedKey := output.LastEvaluatedKey
 
+		// DynamoDB paginates the results returned. If the queried data spans multiple
+		// pages, the handler will send multiple requests.
+		lastEvaluatedKey := output.LastEvaluatedKey
 		if !single {
 			for len(lastEvaluatedKey) != 0 {
 				input.ExclusiveStartKey = output.LastEvaluatedKey
@@ -106,8 +119,10 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 		return events.APIGatewayProxyResponse{
 			Body: string(json),
+			// The lambda handler includes necessary CORS headers in the API Gateway response
 			Headers: map[string]string{
-				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,authorization-token",
+				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+					"X-Api-Key,X-Amz-Security-Token,authorization-token",
 				"Access-Control-Allow-Origin":  "*",
 				"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
 			},
@@ -128,10 +143,16 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		}
 
 		itemMap["ProjectId"] = request.PathParameters["ProjectId"]
-		itemMap["ProjectId#DeviceId"] = fmt.Sprintf("%s#%s", itemMap["ProjectId"], itemMap["DeviceId"])
+		itemMap["ProjectId#DeviceId"] = fmt.Sprintf("%s#%s",
+			itemMap["ProjectId"],
+			itemMap["DeviceId"],
+		)
 
 		if locationID, locationIDOk := itemMap["LocationId"]; locationIDOk {
-			itemMap["ProjectId#LocationId"] = fmt.Sprintf("%s#%s", itemMap["ProjectId"], locationID)
+			itemMap["ProjectId#LocationId"] = fmt.Sprintf("%s#%s",
+				itemMap["ProjectId"],
+				locationID,
+			)
 		}
 
 		item := utils.MapToAttributeValues(itemMap)
@@ -149,7 +170,8 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 		return events.APIGatewayProxyResponse{
 			Body: "Success! Item added",
 			Headers: map[string]string{
-				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,authorization-token",
+				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+					"X-Api-Key,X-Amz-Security-Token,authorization-token",
 				"Access-Control-Allow-Origin":  "*",
 				"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
 			},
@@ -159,7 +181,8 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 	return events.APIGatewayProxyResponse{
 		Body: "Method not supported",
 		Headers: map[string]string{
-			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,authorization-token",
+			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+				"X-Api-Key,X-Amz-Security-Token,authorization-token",
 			"Access-Control-Allow-Origin":  "*",
 			"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
 		},
@@ -168,5 +191,5 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 }
 
 func main() {
-	lambda.Start(handler)
+	lambda.Start(projectEndpointHandler)
 }

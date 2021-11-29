@@ -1,5 +1,4 @@
 # Thermonitor Complete Project Files
-## Includes dashboard client, telemetry service, weather service, and sensor client program
 
 ### Source Directories:
 - dashboard client: [`py/src/thermonitor`](https://github.com/dieboljo/thermonitor/tree/master/py/src/thermonitor)

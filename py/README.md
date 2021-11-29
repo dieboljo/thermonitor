@@ -1,5 +1,5 @@
 # Thermonitor
-## A TUI IoT sensor dashboard
+A TUI IoT sensor dashboard
 
 ### Steps to install:
 - conda env create --file environment.yaml
@@ -8,5 +8,5 @@
 - python3 -m pip show thermonitor
 - binary is located in 'bin' folder of thermonitor env (sibling to 'lib' folder above)
 - symlink binary from step above to path, or add to path
-- OPTIONAL: run aviader server (`node app.js` in aviader folder)
+- OPTIONAL: run aviader server (`node app.js` in weather service folder)
 - thermonitor

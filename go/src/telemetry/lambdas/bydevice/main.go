@@ -17,7 +17,13 @@ import (
 	"telemetry/utils"
 )
 
-func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
+// deviceEndpointHandler is an AWS Lambda function
+// that parses the URL used to access the API Gateway.
+// It uses path parameters and optional query string parameters to retrieve data
+// from DynamoDB for a particular project and device.
+func deviceEndpointHandler(
+	request events.APIGatewayProxyRequest,
+) (events.APIGatewayProxyResponse, error) {
 	cfg, err := config.LoadDefaultConfig(context.TODO())
 	if err != nil {
 		log.Fatalf("Failed to load configuration, %v", err)
@@ -25,7 +31,9 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 	client := dynamodb.NewFromConfig(cfg)
 
+	// The handler only handles GET requests.
 	if request.HTTPMethod == "GET" {
+		// The primary key is a composite key of the ProjectId and DeviceId
 		primaryKey := fmt.Sprintf(
 			"%s#%s",
 			request.PathParameters["ProjectId"],
@@ -43,6 +51,9 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 			},
 		}
 
+		// If the 'single' query string parameter exists and is truthy, fetch a single value only.
+		// This value is the most recent device data or the most recent in the chosen time frame,
+		// if supplied with the 'start' and/or 'end' query parameters.
 		singleStr, singleOk := request.QueryStringParameters["single"]
 		single := false
 		if singleOk {
@@ -53,6 +64,9 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 			}
 		}
 
+		// The 'start' and 'end' query string parameters
+		// set the inclusive time range for queried data.
+		// Both are optional, and one can be supplied without the other.
 		start, startOk := request.QueryStringParameters["start"]
 		end, endOk := request.QueryStringParameters["end"]
 		switch {
@@ -90,6 +104,9 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 			log.Fatalf("Failed to query table, %v", err)
 		}
 		items = append(items, output.Items...)
+
+		// DynamoDB paginates the results returned. If the queried data spans multiple
+		// pages, the handler will send multiple requests.
 		lastEvaluatedKey := output.LastEvaluatedKey
 		if !single {
 			for len(lastEvaluatedKey) != 0 {
@@ -110,8 +127,10 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 
 		return events.APIGatewayProxyResponse{
 			Body: string(json),
+			// The lambda handler includes necessary CORS headers in the API Gateway response
 			Headers: map[string]string{
-				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,authorization-token",
+				"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+					"X-Api-Key,X-Amz-Security-Token,authorization-token",
 				"Access-Control-Allow-Origin":  "*",
 				"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
 			},
@@ -121,7 +140,8 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 	return events.APIGatewayProxyResponse{
 		Body: "Method not supported",
 		Headers: map[string]string{
-			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,authorization-token",
+			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+				"X-Api-Key,X-Amz-Security-Token,authorization-token",
 			"Access-Control-Allow-Origin":  "*",
 			"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
 		},
@@ -130,5 +150,5 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 }
 
 func main() {
-	lambda.Start(handler)
+	lambda.Start(deviceEndpointHandler)
 }
