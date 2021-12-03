@@ -15,7 +15,7 @@
 # vendor/
 
 # Sensitive files
-go/src/telemetry/constants/tokens.go
+#go/src/telemetry/constants/tokens.go
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
