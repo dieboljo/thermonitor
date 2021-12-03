@@ -193,7 +193,7 @@ class Sensor:
     def set_label(self, label: str):
         """Sets the label to display for the sensor"""
         self._label = label
-        self._progress_table.columns[0]._cells[2] = Padding(
+        self._progress_table.columns[0]._cells[-1] = Padding(
             Text(self._label, style="green", justify="center"),
             (1, 0),
         )
