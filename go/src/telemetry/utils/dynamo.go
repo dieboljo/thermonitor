@@ -2,10 +2,17 @@ package utils
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
+	"log"
+	"strconv"
+	"telemetry/constants"
 
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
+	"github.com/aws/aws-sdk-go/aws"
 )
 
 // DynamoDbPutItemAPI defines interface for PutItem function.
@@ -90,4 +97,192 @@ func QueryTable(
 	input *dynamodb.QueryInput,
 ) (*dynamodb.QueryOutput, error) {
 	return api.Query(c, input)
+}
+
+func CreateCompositeKey(
+	request *events.APIGatewayProxyRequest,
+	param1 string,
+	param2 string,
+) string {
+	key := fmt.Sprintf(
+		"%s#%s",
+		request.PathParameters[param1],
+		request.PathParameters[param2],
+	)
+	return key
+}
+
+func CreateQueryInput(
+	primaryName string,
+	primaryValue string,
+) *dynamodb.QueryInput {
+	input := &dynamodb.QueryInput{
+		TableName: aws.String(constants.TABLE_NAME),
+		ExpressionAttributeNames: map[string]string{
+			"#primaryName": primaryName,
+		},
+		ExpressionAttributeValues: map[string]types.AttributeValue{
+			":primaryValue": &types.AttributeValueMemberS{
+				Value: primaryValue,
+			},
+		},
+	}
+	return input
+}
+
+func EvaluateSingleParam(
+	request *events.APIGatewayProxyRequest,
+	input *dynamodb.QueryInput,
+) bool {
+	singleStr, singleOk := request.QueryStringParameters["single"]
+	single := false
+	if singleOk {
+		single, _ = strconv.ParseBool(singleStr)
+		if single {
+			input.Limit = aws.Int32(1)
+			input.ScanIndexForward = aws.Bool(false)
+		}
+	}
+	return single
+}
+
+func EvaluateStartEndParams(
+	request *events.APIGatewayProxyRequest,
+	input *dynamodb.QueryInput,
+) {
+	start, startOk := request.QueryStringParameters["start"]
+	end, endOk := request.QueryStringParameters["end"]
+	switch {
+	case startOk && endOk:
+		setTimeRange(input, start, end)
+	case startOk:
+		setLowerTimeBound(input, start)
+	case endOk:
+		setUpperTimeBound(input, end)
+	default:
+		input.KeyConditionExpression = aws.String("#primaryName = :primaryValue")
+	}
+}
+
+func setTimeRange(input *dynamodb.QueryInput, start string, end string) {
+	input.KeyConditionExpression = aws.String(
+		"#primaryName = :primaryValue AND EpochTime BETWEEN :start AND :end",
+	)
+	input.ExpressionAttributeValues[":start"] = &types.AttributeValueMemberN{
+		Value: start,
+	}
+	input.ExpressionAttributeValues[":end"] = &types.AttributeValueMemberN{
+		Value: end,
+	}
+}
+
+func setLowerTimeBound(input *dynamodb.QueryInput, start string) {
+	input.KeyConditionExpression = aws.String(
+		"#primaryName = :primaryValue AND EpochTime >= :start",
+	)
+	input.ExpressionAttributeValues[":start"] = &types.AttributeValueMemberN{
+		Value: start,
+	}
+}
+
+func setUpperTimeBound(input *dynamodb.QueryInput, end string) {
+	input.KeyConditionExpression = aws.String(
+		"#primaryName = :primaryValue AND EpochTime <= :end",
+	)
+	input.ExpressionAttributeValues[":end"] = &types.AttributeValueMemberN{
+		Value: end,
+	}
+}
+
+func InitClient() *dynamodb.Client {
+	cfg, err := config.LoadDefaultConfig(context.TODO())
+	if err != nil {
+		log.Fatalf("Failed to load configuration, %v", err)
+	}
+
+	return dynamodb.NewFromConfig(cfg)
+}
+
+func GetData(
+	client *dynamodb.Client,
+	input *dynamodb.QueryInput,
+	single bool,
+) []map[string]types.AttributeValue {
+	var items []map[string]types.AttributeValue
+	output, err := QueryTable(context.TODO(), client, input)
+	if err != nil {
+		log.Fatalf("Failed to query table, %v", err)
+	}
+	items = append(items, output.Items...)
+
+	// DynamoDB paginates the results returned. If the queried data spans multiple
+	// pages, the handler will send multiple requests.
+	if !single {
+		getMoreData(client, input, output.LastEvaluatedKey, items)
+	}
+	return items
+}
+
+func getMoreData(
+	client *dynamodb.Client,
+	input *dynamodb.QueryInput,
+	lastKey map[string]types.AttributeValue,
+	items []map[string]types.AttributeValue,
+) {
+	var output *dynamodb.QueryOutput
+	var err error
+	for lastKey != nil {
+		input.ExclusiveStartKey = lastKey
+		output, err = QueryTable(context.TODO(), client, input)
+		if err != nil {
+			log.Fatalf("Failed to query table, %v", err)
+		}
+		lastKey = output.LastEvaluatedKey
+		items = append(items, output.Items...)
+	}
+}
+
+func GetSuccessResponse(items []map[string]types.AttributeValue) (events.APIGatewayProxyResponse, error) {
+	json, err := json.Marshal(items)
+	if err != nil {
+		log.Fatalf("Could not encode results")
+	}
+
+	return events.APIGatewayProxyResponse{
+		Body: string(json),
+		// The lambda handler includes necessary CORS headers in the API Gateway response
+		Headers: map[string]string{
+			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+				"X-Api-Key,X-Amz-Security-Token,authorization-token",
+			"Access-Control-Allow-Origin":  "*",
+			"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+		},
+		StatusCode: 200,
+	}, nil
+}
+
+func PostSuccessResponse() (events.APIGatewayProxyResponse, error) {
+	return events.APIGatewayProxyResponse{
+		Body: "Success! Item added",
+		Headers: map[string]string{
+			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+				"X-Api-Key,X-Amz-Security-Token,authorization-token",
+			"Access-Control-Allow-Origin":  "*",
+			"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+		},
+		StatusCode: 200,
+	}, nil
+}
+
+func MethodNotAllowedResponse() (events.APIGatewayProxyResponse, error) {
+	return events.APIGatewayProxyResponse{
+		Body: "Method not supported",
+		Headers: map[string]string{
+			"Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization," +
+				"X-Api-Key,X-Amz-Security-Token,authorization-token",
+			"Access-Control-Allow-Origin":  "*",
+			"Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+		},
+		StatusCode: 405,
+	}, nil
 }

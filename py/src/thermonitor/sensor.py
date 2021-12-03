@@ -131,8 +131,6 @@ class Sensor:
         data = response.json()
         if data:
             recent = data.pop()
-            with open('log.txt', 'a') as logfile:
-                logfile.write(str(recent) + '\n\n')
             location = recent['LocationId']['Value'] if 'LocationId' in recent else None
             epoch = float(recent['EpochTime']['Value'])
             temperature = (float(recent['Temperature']['Value'])
