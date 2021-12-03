@@ -185,10 +185,11 @@ class Sensors:
             cell.set_label(label)
 
     def run(self):
-        """Continuously refreshed the dashboard until stop signal occurs"""
+        """Continuously refresh the dashboard until stop signal occurs"""
         while self._stop_event.is_set() is False:
-            with self._lock:
-                self._update_dash()
+            if self._context.state in self._context.DASH_STATES:
+                with self._lock:
+                    self._update_dash()
             time.sleep(5)
 
     def _select_endmost_sensor(self):

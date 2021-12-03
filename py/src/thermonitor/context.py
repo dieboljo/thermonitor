@@ -37,14 +37,14 @@ class Context:
             path of config file location (default "~/.thermonitor.conf")
     """
 
-    _layout: Layout = None
-    _listener: KeyListener = None
-    _sensors: Sensors = None
-    _state: str = "normal"
-    _unit: str = Units.C.value
+    DASH_STATES = ["normal", "edit", "move"]
 
     def __init__(self, file: str):
         self._file = file
+        self._layout: Layout = None
+        self._listener: KeyListener = None
+        self._sensors: Sensors = None
+        self._state: str = "normal"
         self._states: dict[str, State] = {
             "normal": NormalState(self),
             "edit": EditState(self),
@@ -52,6 +52,7 @@ class Context:
             "help": HelpState(self),
             "detail": DetailState(self),
         }
+        self._unit: str = Units.C.value
 
     def _apply_config(self, config: Config):
         """Applies the loaded config"""

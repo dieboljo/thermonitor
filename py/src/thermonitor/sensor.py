@@ -40,7 +40,6 @@ class Sensor:
             the initial label to display for the sensor
     """
 
-    DASH_STATES = ["normal", "edit", "move"]
     HOSTNAME = "bko7deq544.execute-api.us-east-2.amazonaws.com/dev"
     AUTHORIZATION_TOKEN = "allow"
     MAX_WIDTH = 50
@@ -114,7 +113,7 @@ class Sensor:
         """Retrieves sensor data and parses fields to be plotted"""
         start_time, end_time = self._calculate_plot_domain(interval)
         data = self._fetch_plot_data(start_time, end_time)
-        if data:
+        if data and isinstance(data, list):
             temperatures: DataPoints = []
             humidities: DataPoints = []
             for entry in data:
@@ -129,7 +128,7 @@ class Sensor:
         headers = {'authorization-token': self.AUTHORIZATION_TOKEN}
         response = requests.get(endpoint, headers=headers)
         data = response.json()
-        if data:
+        if data and isinstance(data, list):
             recent = data.pop()
             location = recent['LocationId']['Value'] if 'LocationId' in recent else None
             epoch = float(recent['EpochTime']['Value'])
@@ -242,8 +241,7 @@ class Sensor:
         task = self._humidity.tasks[0]
         current = task.completed
         delta = humidity - current
-        if state in self.DASH_STATES:
-            self._humidity.advance(task.id, delta)
+        self._humidity.advance(task.id, delta)
 
     def update_temperature_bar(self, temperature: float,
                                state: str, unit: str):
@@ -254,8 +252,7 @@ class Sensor:
         if unit != 'C':
             temp = utils.c_to_f(temperature)
         delta = temp - current
-        if state in self.DASH_STATES:
-            self._temperature.update(task.id, advance=delta)
+        self._temperature.update(task.id, advance=delta)
 
 
 class PanelDimensions(NamedTuple):

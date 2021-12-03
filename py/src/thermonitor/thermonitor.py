@@ -49,7 +49,7 @@ def run(stop_event: Event):
     start_tasks(context)
 
     # start the live display
-    with Live(layout, refresh_per_second=50):
+    with Live(layout, refresh_per_second=50, transient=True):
         while True:
             context.listener.handle_char()
             time.sleep(.02)
