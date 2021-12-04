@@ -16,6 +16,7 @@
 
 # Sensitive files
 #go/src/telemetry/constants/tokens.go
+TODO.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -104,7 +104,7 @@ class MoveState(State):
             title_style=f"bold {Colors.YELLOW.value}",
         )
         hint.add_column(justify="center")
-        hint.add_row("(◀|h)  (▼|j)  "
-                     "(▲|k)  (▶|l)")
+        hint.add_row("(h)◀  (j)▼  "
+                     "(k)▲  (l)▶")
         hint.add_row("(Enter|q)uit move mode")
         return Align.center(hint, vertical="middle")

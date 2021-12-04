@@ -86,6 +86,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             println!("Something else happened. Status: {:?}", res.status());
         }
 
-        hal::Delay.delay_ms(5000u16);
+        hal::Delay.delay_ms(60000u16);
     }
 }
