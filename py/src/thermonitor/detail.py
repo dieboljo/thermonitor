@@ -47,7 +47,6 @@ class DetailState(State):
             'r': self._handle_r,
             'u': self._handle_u,
         }
-        self._interval: str = Intervals.HOUR.value
         self._location_info: LocationInfo = None
         self._plot_data: dict[str, dict[str, PlotData]] = {}
         self._sensor_info: SensorInfo = None
@@ -155,17 +154,13 @@ class DetailState(State):
     def _get_new_data(self):
         """Retrieves latest sensor data, info about sensor's location,
         and sensor data over different time periods"""
-        intervals = [Intervals.DAY.value, Intervals.HOUR.value, Intervals.MINUTE.value]
         self._sensor_info = self._context.sensors.update_info()
         self._location_info = self._refresh_location_info(self._sensor_info.location_id)
-        self._plot_data = self._context.sensors.update_timeline(intervals)
+        self._plot_data = self._context.sensors.update_timeline()
 
     def _go_back(self):
         """Goes back to dashboard"""
         self._clear_details()
-        layout = self._context.layout
-        layout.get(Layouts.DETAIL.value).visible = False
-        layout.get(Layouts.DASH.value).visible = True
         self._context.change_state("normal")
 
     def _clear_details(self):
@@ -178,25 +173,22 @@ class DetailState(State):
 
     def _handle_d(self):
         """Key handler, displays plot data aggregated by day"""
-        self._interval = Intervals.DAY.value
+        self._context.interval = Intervals.DAY.value
         self._render_details()
 
     def _handle_h(self):
         """Key handler, displays plot data aggregated by hour"""
-        self._interval = Intervals.HOUR.value
+        self._context.interval = Intervals.HOUR.value
         self._render_details()
 
     def _handle_m(self):
         """Key handler, displays plot data aggregated by minute"""
-        self._interval = Intervals.MINUTE.value
+        self._context.interval = Intervals.MINUTE.value
         self._render_details()
 
     def _handle_q_mark(self):
         """Key handler, shows help screen"""
         if self._current_tooltip == "initial":
-            layout = self._context.layout
-            layout.get(Layouts.DETAIL.value).visible = False
-            layout.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
         else:
             self._default_handle('?')
@@ -209,16 +201,6 @@ class DetailState(State):
         """Key handler, toggles temperature units ['C' | 'F']"""
         self._context.toggle_units()
         self._render_details()
-
-    @property
-    def interval(self) -> str:
-        """Current plot interval, one of 'minute', 'hour', or 'day'"""
-        return self._interval
-
-    @interval.setter
-    def interval(self, value: str):
-        """Sets current plot interval, one of 'minute', 'hour', or 'day'"""
-        self._interval = value
 
     def on_mount(self):
         """Initialize view and refresh data if coming from dashboard,
@@ -235,18 +217,18 @@ class DetailState(State):
 
     def _render_humidity_timeline(self):
         """Creates humidity plot with current data and currently selected interval"""
-        data_x, data_y, labels = self._plot_data[self._interval]["humidities"]
+        data_x, data_y, labels = self._plot_data[self._context.interval]["humidities"]
         layout = self._context.layout.get(Layouts.HUMIDITY_TIMELINE.value)
         if data_x and data_y:
             plot = self._create_humidity_plot(data_x, data_y, labels)
             padding = plot.get_dimensions().padding
             layout.update(Padding(Align.center(plot, vertical="middle"), padding))
         else:
-            if self._interval == Intervals.MINUTE.value:
+            if self._context.interval == Intervals.MINUTE.value:
                 layout.update(Align.center(Text("No minutely humidity data"), vertical="middle"))
-            elif self._interval == Intervals.HOUR.value:
+            elif self._context.interval == Intervals.HOUR.value:
                 layout.update(Align.center(Text("No hourly humidity data"), vertical="middle"))
-            elif self._interval == Intervals.DAY.value:
+            elif self._context.interval == Intervals.DAY.value:
                 layout.update(Align.center(Text("No daily humidity data"), vertical="middle"))
 
     @staticmethod
@@ -283,23 +265,24 @@ class DetailState(State):
 
     def _render_temperature_timeline(self):
         """Creates temperature plot with current data and currently selected interval"""
-        data_x, data_y, labels = self._plot_data[self._interval]["temperatures"]
+        data_x, data_y, labels = self._plot_data[self._context.interval]["temperatures"]
         layout = self._context.layout.get(Layouts.TEMPERATURE_TIMELINE.value)
         if data_x and data_y:
             plot = self._create_temperature_plot(data_x, data_y, labels)
             padding = plot.get_dimensions().padding
             layout.update(Padding(Align.center(plot, vertical="middle"), padding))
         else:
-            if self._interval == Intervals.MINUTE.value:
+            if self._context.interval == Intervals.MINUTE.value:
                 layout.update(Align.center(Text("No minutely temperature data"), vertical="middle"))
-            elif self._interval ==Intervals.HOUR.value:
+            elif self._context.interval ==Intervals.HOUR.value:
                 layout.update(Align.center(Text("No hourly temperature data"), vertical="middle"))
-            elif self._interval ==Intervals.DAY.value:
+            elif self._context.interval ==Intervals.DAY.value:
                 layout.update(Align.center(Text("No daily temperature data"), vertical="middle"))
 
     def _refresh_details(self):
         """Displays spinner while fetching new data"""
         layout = self._context.layout
+        layout.get(Layouts.SPINNER.value).visible = True
         status = Status(status="",
                         spinner="bouncingBall",
                         spinner_style="bold dark_goldenrod")

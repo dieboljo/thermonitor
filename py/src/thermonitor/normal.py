@@ -32,6 +32,8 @@ class NormalState(State):
         self._key_handlers: dict[int|str, Callable[[], None]] = {
             27: self._handle_esc,
             63: self._handle_q_mark,
+            'a': self._handle_a,
+            'd': self._handle_d,
             'e': self._handle_e,
             'h': self._handle_h,
             'j': self._handle_j,
@@ -39,10 +41,12 @@ class NormalState(State):
             'l': self._handle_l,
             'm': self._handle_m,
             'n': self._handle_n,
+            'p': self._handle_p,
             'q': self._handle_q,
             's': self._handle_s,
             't': self._handle_t,
             'u': self._handle_u,
+            'w': self._handle_w,
             'y': self._handle_y,
         }
         self._tooltips: dict[str, Callable[[], RenderableType]] = {
@@ -75,30 +79,58 @@ class NormalState(State):
     def _handle_h(self):
         """Key handler, move cursor left"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(-1, 0)
+            self._handle_left()
         else:
             self._default_handle('h')
 
     def _handle_j(self):
         """Key handler, move cursor down"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(0, 1)
+            self._handle_down()
         else:
             self._default_handle('j')
 
     def _handle_k(self):
         """Key handler, move cursor up"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(0, -1)
+            self._handle_up()
         else:
             self._default_handle('k')
 
     def _handle_l(self):
         """Key handler, move cursor right"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(1, 0)
+            self._handle_right()
         else:
             self._default_handle('l')
+
+    def _handle_a(self):
+        """Key handler, move cursor left"""
+        if self._current_tooltip == "initial":
+            self._handle_left()
+        else:
+            self._default_handle('a')
+
+    def _handle_s(self):
+        """Key handler, move cursor down"""
+        if self._current_tooltip == "initial":
+            self._handle_down()
+        else:
+            self._default_handle('s')
+
+    def _handle_w(self):
+        """Key handler, move cursor up"""
+        if self._current_tooltip == "initial":
+            self._handle_up()
+        else:
+            self._default_handle('w')
+
+    def _handle_d(self):
+        """Key handler, move cursor right"""
+        if self._current_tooltip == "initial":
+            self._handle_right()
+        else:
+            self._default_handle('d')
 
     def _handle_m(self):
         """Key handler, enter move mode"""
@@ -117,26 +149,20 @@ class NormalState(State):
     def _handle_q_mark(self):
         """Key handler, show help screen"""
         if self._current_tooltip == "initial":
-            layout = self._context.layout
-            layout.get(Layouts.DASH.value).visible = False
-            layout.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
         else:
             self._default_handle('?')
 
-    def _handle_s(self):
-        """Key handler, display save prompt"""
+    def _handle_p(self):
+        """Key handler, display save (put state) prompt"""
         if self._current_tooltip == "initial":
             self.set_tooltip("save")
         else:
-            self._default_handle('s')
+            self._default_handle('p')
 
     def _handle_t(self):
         """Key handler, enter timeline mode"""
         if self._current_tooltip == "initial":
-            layout = self._context.layout
-            layout.get(Layouts.DASH.value).visible = False
-            layout.get(Layouts.SPINNER.value).visible = True
             self._context.change_state("detail")
         else:
             self._default_handle('t')
@@ -173,7 +199,7 @@ class NormalState(State):
         hint.add_column()
         hint.add_column()
         hint.add_row("(t)imeline", "(e)dit mode", "(m)ove mode")
-        hint.add_row("(s)ave", "(u)nit", "(?)help")
+        hint.add_row("(p)ut state", "(u)nit", "(?)help")
         return Align.center(hint, vertical="middle")
 
     @staticmethod

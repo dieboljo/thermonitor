@@ -30,11 +30,15 @@ class MoveState(State):
             10: self._handle_enter,
             27: self._handle_esc,
             63: self._handle_q_mark,
+            'a': self._handle_a,
+            'd': self._handle_d,
             'h': self._handle_h,
             'j': self._handle_j,
             'k': self._handle_k,
             'l': self._handle_l,
             'q': self._handle_q,
+            's': self._handle_s,
+            'w': self._handle_w,
         }
         self._tooltips = {
             "initial": self.render_initial_tooltip,
@@ -54,40 +58,65 @@ class MoveState(State):
     def _handle_h(self):
         """Key handler, move cursor left"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_sensor(-1, 0)
+            self._handle_left()
         else:
             self._default_handle('h')
 
     def _handle_j(self):
         """Key handler, move cursor down"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_sensor(0, 1)
+            self._handle_down()
         else:
             self._default_handle('j')
 
     def _handle_k(self):
         """Key handler, move cursor up"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_sensor(0, -1)
+            self._handle_up()
         else:
             self._default_handle('k')
 
     def _handle_l(self):
         """Key handler, move cursor right"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_sensor(1, 0)
+            self._handle_right()
         else:
             self._default_handle('l')
 
     def _handle_q_mark(self):
         """Key handler, show help screen"""
         if self._current_tooltip == "initial":
-            layout = self._context.layout
-            layout.get(Layouts.DASH.value).visible = False
-            layout.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
         else:
             self._default_handle('?')
+
+    def _handle_a(self):
+        """Key handler, move cursor left"""
+        if self._current_tooltip == "initial":
+            self._handle_left()
+        else:
+            self._default_handle('a')
+
+    def _handle_s(self):
+        """Key handler, move cursor down"""
+        if self._current_tooltip == "initial":
+            self._handle_down()
+        else:
+            self._default_handle('s')
+
+    def _handle_w(self):
+        """Key handler, move cursor up"""
+        if self._current_tooltip == "initial":
+            self._handle_up()
+        else:
+            self._default_handle('w')
+
+    def _handle_d(self):
+        """Key handler, move cursor right"""
+        if self._current_tooltip == "initial":
+            self._handle_right()
+        else:
+            self._default_handle('d')
 
     def on_mount(self):
         """Change panel border color upon switching to move mode"""
@@ -104,7 +133,7 @@ class MoveState(State):
             title_style=f"bold {Colors.YELLOW.value}",
         )
         hint.add_column(justify="center")
-        hint.add_row("(h)◀  (j)▼  "
-                     "(k)▲  (l)▶")
+        hint.add_row("(h|a)◀  (j|s)▼  "
+                     "(k|w)▲  (l|d)▶")
         hint.add_row("(Enter|q)uit move mode")
         return Align.center(hint, vertical="middle")

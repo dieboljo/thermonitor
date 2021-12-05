@@ -33,6 +33,7 @@ class EditState(State):
             10: self._handle_enter,
             ' ': self._handle_space,
             'a': self._handle_a,
+            'c': self._handle_c,
             'd': self._handle_d,
             'h': self._handle_h,
             'j': self._handle_j,
@@ -41,6 +42,8 @@ class EditState(State):
             'n': self._handle_n,
             'q': self._handle_q,
             'r': self._handle_r,
+            's': self._handle_s,
+            'w': self._handle_w,
             'y': self._handle_y,
         }
         self._tooltips: dict[str, Callable[[], RenderableType]] = {
@@ -97,13 +100,6 @@ class EditState(State):
         else:
             self._context.change_state("normal")
 
-    def _handle_a(self):
-        """Key handler, signals intent to add sensor to dashboard"""
-        if self._current_tooltip == "initial":
-            self.set_tooltip("label_prompt")
-        else:
-            self._default_handle('a')
-
     def _handle_backspace(self):
         """Key handler for input prompts"""
         if self._current_tooltip == "label_prompt":
@@ -118,12 +114,12 @@ class EditState(State):
         else:
             self._default_handle(127)
 
-    def _handle_d(self):
+    def _handle_r(self):
         """Key handler, signals intent to remove sensor from dashboard"""
         if self._current_tooltip == "initial":
             self.set_tooltip("delete")
         else:
-            self._default_handle('d')
+            self._default_handle('r')
 
     def _handle_enter(self):
         """Key handler, submits input or returns to normal mode"""
@@ -141,34 +137,36 @@ class EditState(State):
     def _handle_h(self):
         """Key handler, moves cursor left"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(-1, 0)
+            self._handle_left()
         else:
             self._default_handle('h')
 
     def _handle_j(self):
         """Key handler, moves cursor down"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(0, 1)
+            self._handle_down()
         else:
             self._default_handle('j')
 
     def _handle_k(self):
         """Key handler, moves cursor up"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(0, -1)
+            self._handle_up()
         else:
             self._default_handle('k')
 
     def _handle_l(self):
         """Key handler, moves cursor right"""
         if self._current_tooltip == "initial":
-            self._context.sensors.move_cursor(1, 0)
+            self._handle_right()
         else:
             self._default_handle('l')
 
     def _handle_n(self):
         """Key handler, 'no' answer to confirmation prompt"""
-        if self._current_tooltip == "delete":
+        if self._current_tooltip == "initial":
+            self.set_tooltip("label_prompt")
+        elif self._current_tooltip == "delete":
             self._go_back()
         else:
             self._default_handle('n')
@@ -185,19 +183,16 @@ class EditState(State):
     def _handle_q_mark(self):
         """Key handler, show help screen"""
         if self._current_tooltip == "initial":
-            layout = self._context.layout
-            layout.get(Layouts.DASH.value).visible = False
-            layout.get(Layouts.HELP.value).visible = True
             self._context.change_state("help")
         else:
             self._default_handle('?')
 
-    def _handle_r(self):
+    def _handle_c(self):
         """Key handler, signal intent to give sensor a new label"""
         if self._current_tooltip == "initial":
             self.set_tooltip("rename_prompt")
         else:
-            self._default_handle('r')
+            self._default_handle('c')
 
     def _handle_space(self):
         """Key handler when labelling or renaming sensor"""
@@ -216,6 +211,34 @@ class EditState(State):
             self._confirm_delete()
         else:
             self._default_handle('y')
+
+    def _handle_a(self):
+        """Key handler, move cursor left"""
+        if self._current_tooltip == "initial":
+            self._handle_left()
+        else:
+            self._default_handle('a')
+
+    def _handle_s(self):
+        """Key handler, move cursor down"""
+        if self._current_tooltip == "initial":
+            self._handle_down()
+        else:
+            self._default_handle('s')
+
+    def _handle_w(self):
+        """Key handler, move cursor up"""
+        if self._current_tooltip == "initial":
+            self._handle_up()
+        else:
+            self._default_handle('w')
+
+    def _handle_d(self):
+        """Key handler, move cursor right"""
+        if self._current_tooltip == "initial":
+            self._handle_right()
+        else:
+            self._default_handle('d')
 
     def on_mount(self):
         """Change panel border color upon switching to edit mode"""
@@ -267,7 +290,7 @@ class EditState(State):
             title_style=f"bold {Colors.RED.value}",
         )
         hint.add_column()
-        hint.add_row("(a)dd     (d)elete   (r)ename")
+        hint.add_row("(n)ew     (r)emove   (c)hange label")
         hint.add_row("(?)help   (Enter|q)uit edit mode")
         return Align.center(hint, vertical="middle")
 

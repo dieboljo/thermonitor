@@ -50,6 +50,13 @@ class SensorInfo(NamedTuple):
     location_id: str
     temperature: float
 
+class States(Enum):
+    DETAIL = "detail"
+    EDIT = "edit"
+    HELP = "help"
+    MOVE = "move"
+    NORMAL = "normal"
+
 class Units(Enum):
     F = 'F'
     C = 'C'

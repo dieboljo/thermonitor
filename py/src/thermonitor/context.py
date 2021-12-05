@@ -8,7 +8,7 @@ import os
 from typing import TYPE_CHECKING, TypedDict
 
 import utils
-from config import Intervals, Units
+from config import Intervals, Layouts, States, Units
 from detail import DetailState
 from edit import EditState
 from help import HelpState
@@ -37,20 +37,22 @@ class Context:
             path of config file location (default "~/.thermonitor.conf")
     """
 
-    DASH_STATES = ["normal", "edit", "move"]
+    DASH_STATES = [States.NORMAL.value, States.EDIT.value, States.MOVE.value]
 
     def __init__(self, file: str):
         self._file = file
-        self._layout: Layout = None
+        self._interval: str = Intervals.HOUR.value
+        self._layouts: Layout = None
         self._listener: KeyListener = None
+        self._previous_state = ''
         self._sensors: Sensors = None
-        self._state: str = "normal"
+        self._state: str = States.NORMAL.value
         self._states: dict[str, State] = {
-            "normal": NormalState(self),
-            "edit": EditState(self),
-            "move": MoveState(self),
-            "help": HelpState(self),
-            "detail": DetailState(self),
+            States.NORMAL.value: NormalState(self),
+            States.EDIT.value: EditState(self),
+            States.MOVE.value: MoveState(self),
+            States.HELP.value: HelpState(self),
+            States.DETAIL.value: DetailState(self),
         }
         self._unit: str = Units.C.value
 
@@ -59,7 +61,7 @@ class Context:
         if "unit" in config and config["unit"] in UNITS:
             self._unit = config["unit"]
         if "interval" in config and config["interval"] in INTERVALS:
-            self._states["detail"].interval = config["interval"]
+            self._interval = config["interval"]
         if "sensors" in config:
             for sensor in config["sensors"]:
                 clean_id = utils.sanitize_id(sensor["id"])
@@ -67,10 +69,22 @@ class Context:
                 if len(clean_id) > 0:
                     self._sensors.add_sensor(clean_id, clean_label)
 
+    def _change_layout(self):
+        if (self._previous_state in self.DASH_STATES
+                and self._state  in self.DASH_STATES):
+            pass
+        else:
+            if self._previous_state in self.DASH_STATES:
+                self._layouts.get(Layouts.DASH.value).visible = False
+            else:
+                self._layouts.get(self._previous_state).visible = False
+            self._layouts.get(self._state).visible = True
+
     def change_state(self, state_name: str):
         state = self._states[state_name]
-        state.set_previous_state(self._state)
+        self._previous_state = self._state
         self._state = state_name
+        self._change_layout()
         state.set_tooltip("initial")
         state.on_mount()
 
@@ -96,14 +110,24 @@ class Context:
         return self._file
 
     @property
+    def interval(self) -> str:
+        """Current plot interval"""
+        return self._interval
+
+    @interval.setter
+    def interval(self, value: str):
+        """Sets the current plot interval"""
+        self._interval = value
+
+    @property
     def layout(self) -> Layout:
         """Rich Layout instance"""
-        return self._layout
+        return self._layouts
 
     @layout.setter
     def layout(self, value: Layout):
         """Sets the Rich Layout instance"""
-        self._layout = value
+        self._layouts = value
 
     @property
     def listener(self) -> KeyListener:
@@ -132,6 +156,16 @@ class Context:
         """Passes a key event to the current state for handling"""
         self._states[self._state].handle_key(key)
 
+    @property
+    def previous_state(self) -> str:
+        """Gets the name of the previous state"""
+        return self._previous_state
+
+    @previous_state.setter
+    def previous_state(self, state: str):
+        """Sets the name of the previous state, for reference"""
+        self._previous_state = state
+
     def save_config(self):
         """Creates a Dict with the current
         configuration, then writes it to a file
@@ -141,7 +175,7 @@ class Context:
             'w'
         ) as outfile:
             unit = self._unit
-            interval = self._states["detail"].interval
+            interval = self._interval
             sensors = self._get_sensor_list()
             config = Config(unit=unit, interval=interval, sensors=sensors)
             json.dump(config, outfile)

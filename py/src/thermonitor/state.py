@@ -41,12 +41,12 @@ class State(ABC):
     def get_cursor_color(self) -> str|None:
         return self._cursor_color
 
-    def get_previous_state(self) -> str|None:
-        return self._previous_state
-
     @abstractmethod
     def _go_back(self):
         """Abstract method, specify behavior of back action"""
+
+    def _handle_down(self):
+        self._context.sensors.move_cursor(0, 1)
 
     def _handle_esc(self):
         """Key handler for abstract _go_back method"""
@@ -59,9 +59,18 @@ class State(ABC):
         else:
             self._default_handle(key)
 
+    def _handle_left(self):
+        self._context.sensors.move_cursor(-1, 0)
+
     def _handle_q(self):
         """Key handler for abstract _go_back method"""
         self._go_back()
+
+    def _handle_right(self):
+        self._context.sensors.move_cursor(1, 0)
+
+    def _handle_up(self):
+        self._context.sensors.move_cursor(0, -1)
 
     @abstractmethod
     def on_mount(self):
@@ -74,10 +83,6 @@ class State(ABC):
     def set_context(self, context: Context):
         """Sets the current application context"""
         self._context = context
-
-    def set_previous_state(self, state: str|None):
-        """Sets the name of the previous state, for reference"""
-        self._previous_state = state
 
     def set_tooltip(self, tooltip: str):
         """Sets the name of the current tooltip, used to access dictionary"""

@@ -22,11 +22,11 @@ class HelpState(State):
         table.add_column()
         table.add_column()
         table.add_column()
-        table.add_row(Align.right("h"), ':', "move cursor right")
-        table.add_row(Align.right("l"), ':', "move cursor right")
-        table.add_row(Align.right("k"), ' :', "move cursor up")
-        table.add_row(Align.right("j"), ' :', "move cursor down")
-        table.add_row(Align.right('?'), ' :', "show this help screen")
+        table.add_row(Align.right("h or a"), ':', "move cursor left")
+        table.add_row(Align.right("l or d"), ':', "move cursor right")
+        table.add_row(Align.right("k or w"), ':', "move cursor up")
+        table.add_row(Align.right("j or s"), ':', "move cursor down")
+        table.add_row(Align.right('?'), ':', "show this help screen")
         return Padding(Align.center(table), 2)
 
     @staticmethod
@@ -64,15 +64,7 @@ class HelpState(State):
 
     def _go_back(self):
         """Goes back to previous screen"""
-        layout = self._context.layout
-        layout.get(Layouts.HELP.value).visible = False
-        if (self._previous_state == "normal"
-                or self._previous_state == "edit"
-                or self._previous_state == "move"):
-            layout.get(Layouts.DASH.value).visible = True
-        elif self._previous_state == "detail":
-            layout.get(Layouts.DETAIL.value).visible = True
-        self._context.change_state(self._previous_state)
+        self._context.change_state(self._context.previous_state)
 
     def _modes_cells(self) -> RenderableType:
         """Grid cell that contains cells of application modes"""
