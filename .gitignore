@@ -18,6 +18,10 @@
 #go/src/telemetry/constants/tokens.go
 TODO.txt
 
+# Helper files
+py/src/thermonitor/log.txt
+py/src/thermonitor/error.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

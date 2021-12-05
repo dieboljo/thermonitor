@@ -260,13 +260,12 @@ class Sensors:
         sensor_info = current_sensor.get_sensor_info()
         return sensor_info
 
-    def update_timeline(self, intervals: list[str]) -> dict[str, PlotData]:
+    def update_timeline(self) -> PlotData:
         """Updates the plot data for a single sensor"""
         current_sensor = self._get_selected()
-        data = dict()
-        for interval in intervals:
-            temperatures, humidities = current_sensor.get_plot_data(interval)
-            temperatures = utils.aggregate(temperatures, interval)
-            humidities = utils.aggregate(humidities, interval)
-            data[interval] = {"temperatures": temperatures, "humidities": humidities}
+        interval = self._context.interval
+        temperatures, humidities = current_sensor.get_plot_data(interval)
+        temperatures = utils.aggregate(temperatures, interval)
+        humidities = utils.aggregate(humidities, interval)
+        data = {"temperatures": temperatures, "humidities": humidities}
         return data

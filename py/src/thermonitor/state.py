@@ -24,7 +24,6 @@ class State(ABC):
             'q': self._handle_q,
         }
         self._current_tooltip = "initial"
-        self._previous_state: str|None = None
         self._tooltips: dict[str, Callable[[], RenderableType]] = {
             "initial": self.render_initial_tooltip,
         }

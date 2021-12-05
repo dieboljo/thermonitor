@@ -156,7 +156,7 @@ class DetailState(State):
         and sensor data over different time periods"""
         self._sensor_info = self._context.sensors.update_info()
         self._location_info = self._refresh_location_info(self._sensor_info.location_id)
-        self._plot_data = self._context.sensors.update_timeline()
+        self._plot_data[self._context.interval] = self._context.sensors.update_timeline()
 
     def _go_back(self):
         """Goes back to dashboard"""
@@ -205,7 +205,7 @@ class DetailState(State):
     def on_mount(self):
         """Initialize view and refresh data if coming from dashboard,
         skip if coming from help screen"""
-        if self._previous_state == "normal":
+        if self._context.previous_state == "normal":
             self._clear_details()
             self._refresh_details()
 

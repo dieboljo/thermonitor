@@ -51,6 +51,16 @@ class MoveState(State):
         """Returns to normal mode"""
         self._context.change_state("normal")
 
+    def _handle_a(self):
+        """Key handler, move cursor left"""
+        if self._current_tooltip == "initial":
+            self._handle_left()
+        else:
+            self._default_handle('a')
+
+    def _handle_down(self):
+        self._context.sensors.move_sensor(0, 1)
+
     def _handle_enter(self):
         """Key handler, return to normal mode"""
         self._go_back()
@@ -83,6 +93,9 @@ class MoveState(State):
         else:
             self._default_handle('l')
 
+    def _handle_left(self):
+        self._context.sensors.move_sensor(-1, 0)
+
     def _handle_q_mark(self):
         """Key handler, show help screen"""
         if self._current_tooltip == "initial":
@@ -90,12 +103,8 @@ class MoveState(State):
         else:
             self._default_handle('?')
 
-    def _handle_a(self):
-        """Key handler, move cursor left"""
-        if self._current_tooltip == "initial":
-            self._handle_left()
-        else:
-            self._default_handle('a')
+    def _handle_right(self):
+        self._context.sensors.move_sensor(1, 0)
 
     def _handle_s(self):
         """Key handler, move cursor down"""
@@ -103,6 +112,9 @@ class MoveState(State):
             self._handle_down()
         else:
             self._default_handle('s')
+
+    def _handle_up(self):
+        self._context.sensors.move_sensor(0, -1)
 
     def _handle_w(self):
         """Key handler, move cursor up"""

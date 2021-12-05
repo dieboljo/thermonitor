@@ -74,7 +74,9 @@ def build_layout() -> Layout:
     layout["info"].split_column(Layout(name=Layouts.SENSOR_INFO.value, ratio=1),
                                 Layout(name=Layouts.LOCATION_INFO.value, ratio=1))
     layout["timeline"].split_column(Layout(name=Layouts.TEMPERATURE_TIMELINE.value, ratio=1),
-                                    Layout(name=Layouts.HUMIDITY_TIMELINE.value, ratio=1))
+                                    Layout(name=Layouts.TEMPERATURE_SPINNER.value, ratio=1),
+                                    Layout(name=Layouts.HUMIDITY_TIMELINE.value, ratio=1),
+                                    Layout(name=Layouts.HUMIDITY_SPINNER.value, ratio=1))
     return layout
 
 def configure_context(args: Namespace, layout: Layout, stop_event: Event) -> Context:

@@ -70,15 +70,15 @@ class Context:
                     self._sensors.add_sensor(clean_id, clean_label)
 
     def _change_layout(self):
-        if (self._previous_state in self.DASH_STATES
-                and self._state  in self.DASH_STATES):
+        next_layout = (Layouts.DASH.value if self._state in self.DASH_STATES
+                       else self._state)
+        previous_layout = (Layouts.DASH.value if self._previous_state in self.DASH_STATES
+                           else self._previous_state)
+        if next_layout == previous_layout:
             pass
         else:
-            if self._previous_state in self.DASH_STATES:
-                self._layouts.get(Layouts.DASH.value).visible = False
-            else:
-                self._layouts.get(self._previous_state).visible = False
-            self._layouts.get(self._state).visible = True
+            self._layouts.get(previous_layout).visible = False
+            self._layouts.get(next_layout).visible = True
 
     def change_state(self, state_name: str):
         state = self._states[state_name]
