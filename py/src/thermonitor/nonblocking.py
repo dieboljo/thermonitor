@@ -40,11 +40,10 @@ except:
 
         def restore_settings():
             """Restores original tty settings"""
+            old_settings = termios.tcgetattr(sys.stdin)
             termios.tcsetattr(sys.stdin, termios.TCSADRAIN, old_settings)
 
-
         atexit.register(restore_settings)
-        old_settings = termios.tcgetattr(sys.stdin)
 
         tty.setcbreak(sys.stdin.fileno())
     except:

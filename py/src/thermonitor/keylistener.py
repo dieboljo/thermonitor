@@ -49,13 +49,14 @@ class KeyListener:
     def listen(self):
         while self._stop_event.is_set() is False:
             char = nonblocking.read_key()
-            if ord(char) == 27:
-                self._queue.put(27)
-            elif ord(char) == 10:
-                self._queue.put(10)
-            elif ord(char) == 63:
-                self._queue.put(63)
-            elif ord(char) == 127:
-                self._queue.put(127)
-            else:
-                self._queue.put(char)
+            if char:
+                if ord(char) == 27:
+                    self._queue.put(27)
+                elif ord(char) == 10:
+                    self._queue.put(10)
+                elif ord(char) == 63:
+                    self._queue.put(63)
+                elif ord(char) == 127:
+                    self._queue.put(127)
+                else:
+                    self._queue.put(char)

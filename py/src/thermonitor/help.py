@@ -40,7 +40,7 @@ class HelpState(State):
         table.add_column()
         table.add_column()
         table.add_row(Align.right("-f or --file"), ':',
-                      "specify state file (defaults to '~/.thermonitor.conf')")
+                      "specify state file (defaults to './.thermonitor.conf')")
         return Padding(Align.center(table), 2)
 
     def _default_handle(self, _):

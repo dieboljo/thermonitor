@@ -1,0 +1,7 @@
+future==0.18.2
+numpy==1.21.2
+pillow==8.4.0
+plotext==4.0.0
+pyfiglet==0.8.post1
+requests==2.26.0
+rich==10.15.2

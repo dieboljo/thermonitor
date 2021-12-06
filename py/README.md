@@ -10,3 +10,7 @@ A TUI IoT sensor dashboard
 - symlink binary from step above to path, or add to path
 - OPTIONAL: run aviader server (`node app.js` in weather service folder)
 - thermonitor
+
+### Docker:
+- docker build --tag thermonitor
+- docker run -ti thermonitor:latest

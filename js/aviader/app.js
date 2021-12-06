@@ -3,7 +3,8 @@ import fetch from "node-fetch";
 
 var app = express();
 
-const APPID = "7078299be27ee986f92f04a37191b0f3";
+//const APPID = "7078299be27ee986f92f04a37191b0f3";
+const APPID = "8c644c70f599e14898c635864c662e0f";
 app.set('port', 57239);
 
 async function getWeatherData(zip) {

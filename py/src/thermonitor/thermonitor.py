@@ -7,6 +7,7 @@ and location data.
 """
 from __future__ import annotations
 import argparse
+import os
 from threading import Event, Thread
 import time
 from typing import TYPE_CHECKING
@@ -104,8 +105,9 @@ def configure_context(args: Namespace, layout: Layout, stop_event: Event) -> Con
 def parse_args() -> Namespace:
     """Gets the command line arguments"""
     parser = argparse.ArgumentParser()
+    default_state = os.path.join(os.path.dirname(__file__), '.thermonitor.conf')
     parser.add_argument("--file", '-f', help="file location for program state", \
-                        default="~/.thermonitor.conf")
+                        default=default_state)
     return parser.parse_args()
 
 def populate_layout(context: Context):

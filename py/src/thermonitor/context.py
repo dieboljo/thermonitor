@@ -34,7 +34,7 @@ class Context:
     Args
     ----
         file: str
-            path of config file location (default "~/.thermonitor.conf")
+            path of config file location (default "./.thermonitor.conf")
     """
 
     DASH_STATES = [States.NORMAL.value, States.EDIT.value, States.MOVE.value]
