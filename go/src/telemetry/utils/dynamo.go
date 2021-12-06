@@ -218,7 +218,7 @@ func GetData(
 	// DynamoDB paginates the results returned. If the queried data spans multiple
 	// pages, the handler will send multiple requests.
 	if !single {
-		getMoreData(client, input, output.LastEvaluatedKey, items)
+		items = getMoreData(client, input, output.LastEvaluatedKey, items)
 	}
 	return items
 }
@@ -228,7 +228,7 @@ func getMoreData(
 	input *dynamodb.QueryInput,
 	lastKey map[string]types.AttributeValue,
 	items []map[string]types.AttributeValue,
-) {
+) []map[string]types.AttributeValue {
 	var output *dynamodb.QueryOutput
 	var err error
 	for lastKey != nil {
@@ -240,6 +240,7 @@ func getMoreData(
 		lastKey = output.LastEvaluatedKey
 		items = append(items, output.Items...)
 	}
+	return items
 }
 
 func GetSuccessResponse(items []map[string]types.AttributeValue) (events.APIGatewayProxyResponse, error) {

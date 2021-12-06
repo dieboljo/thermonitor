@@ -19,7 +19,7 @@
 TODO.txt
 
 # Helper files
-py/src/thermonitor/log.txt
+py/src/thermonitor/debug.txt
 py/src/thermonitor/error.txt
 
 # Byte-compiled / optimized / DLL files

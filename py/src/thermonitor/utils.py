@@ -14,7 +14,7 @@ VALID_ID_CHARS = "abcdefghijklmnopqrstuvwxyz1234567890"
 VALID_LABEL_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'-"
 
 def aggregate(data: DataPoints, interval: str) -> PlotData:
-    """Aggregates plot data by chosen time division ['Day' | 'Hour' | 'Minute']"""
+    """Aggregates plot data by chosen time division ['day' | 'hour' | 'minute']"""
     grouped: dict[str, list[float]] = {}
     data_x = []
     data_y = []

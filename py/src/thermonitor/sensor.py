@@ -77,7 +77,7 @@ class Sensor:
         if interval == "minute":
             start_time = end_time - (60 * 60)
         elif interval == "day":
-            start_time = end_time - (7 * 24 * 60 * 60)
+            start_time = end_time - (3 * 24 * 60 * 60)
         return (start_time, end_time)
 
     @property
