@@ -86,5 +86,5 @@ class State(ABC):
     def set_tooltip(self, tooltip: str):
         """Sets the name of the current tooltip, used to access dictionary"""
         self._current_tooltip = tooltip
-        layout = self._context.layout.get(Layouts.TOOLTIP.value)
+        layout = self._context.layout.get(Layouts.TOOLTIP_CONTENT.value)
         layout.update(self._tooltips[tooltip]())

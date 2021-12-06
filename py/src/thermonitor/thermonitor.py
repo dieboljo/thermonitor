@@ -62,6 +62,9 @@ def build_layout() -> Layout:
                  Layout(name=Layouts.MAIN.value, ratio=6))
     layout["header"].split_row(Layout(name=Layouts.TITLE.value, ratio=3),
                                Layout(name=Layouts.TOOLTIP.value, ratio=2))
+    layout["tooltip"].split_row(Layout(name=Layouts.TOOLTIP_SPINNER.value, ratio=1),
+                                Layout(name=Layouts.TOOLTIP_CONTENT.value, ratio=1))
+    layout["tooltip spinner"].visible = False
     layout["main"].split_column(Layout(name=Layouts.DASH.value, ratio=1),
                                 Layout(name=Layouts.DETAIL.value, ratio=1),
                                 Layout(name=Layouts.HELP.value, ratio=1),
@@ -73,10 +76,15 @@ def build_layout() -> Layout:
                                Layout(name=Layouts.TIMELINE.value, ratio=1))
     layout["info"].split_column(Layout(name=Layouts.SENSOR_INFO.value, ratio=1),
                                 Layout(name=Layouts.LOCATION_INFO.value, ratio=1))
-    layout["timeline"].split_column(Layout(name=Layouts.TEMPERATURE_TIMELINE.value, ratio=1),
-                                    Layout(name=Layouts.TEMPERATURE_SPINNER.value, ratio=1),
-                                    Layout(name=Layouts.HUMIDITY_TIMELINE.value, ratio=1),
-                                    Layout(name=Layouts.HUMIDITY_SPINNER.value, ratio=1))
+    layout["timeline"].split_column(Layout(name=Layouts.TEMPERATURE.value, ratio=1),
+                                    Layout(name=Layouts.HUMIDITY.value, ratio=1))
+    layout["temperature"].split_row(Layout(name=Layouts.TEMPERATURE_TIMELINE.value, ratio=1),
+                                    Layout(name=Layouts.TEMPERATURE_SPINNER.value, ratio=1))
+    layout["humidity"].split_row(Layout(name=Layouts.HUMIDITY_TIMELINE.value, ratio=1),
+                                 Layout(name=Layouts.HUMIDITY_SPINNER.value, ratio=1))
+    layout["temperature spinner"].visible = False
+    layout["humidity spinner"].visible = False
+
     return layout
 
 def configure_context(args: Namespace, layout: Layout, stop_event: Event) -> Context:

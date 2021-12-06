@@ -156,7 +156,50 @@ class DetailState(State):
         and sensor data over different time periods"""
         self._sensor_info = self._context.sensors.update_info()
         self._location_info = self._refresh_location_info(self._sensor_info.location_id)
+        self._get_new_timeline_data()
+
+    def _get_new_timeline_data(self):
+        """Retrieves latest sensor data for current time period"""
         self._plot_data[self._context.interval] = self._context.sensors.update_timeline()
+
+    def _new_details(self):
+        """Displays spinner while fetching new data on transition to details screen"""
+        layout = self._context.layout
+        layout.get(Layouts.DETAIL.value).visible = False
+        layout.get(Layouts.SPINNER.value).visible = True
+        status = Status(status="",
+                        spinner="bouncingBall",
+                        spinner_style="bold dark_goldenrod")
+        layout.get(Layouts.SPINNER.value).update(
+            Align.center(status, vertical="middle")
+        )
+        self._get_new_data()
+        layout.get(Layouts.SPINNER.value).visible = False
+        layout.get(Layouts.DETAIL.value).visible = True
+        self._render_details()
+
+    def _new_interval(self):
+        """Displays spinner while fetching new data on transition to details screen"""
+        layout = self._context.layout
+        layout.get(Layouts.TEMPERATURE_TIMELINE.value).visible = False
+        layout.get(Layouts.HUMIDITY_TIMELINE.value).visible = False
+        layout.get(Layouts.TEMPERATURE_SPINNER.value).visible = True
+        layout.get(Layouts.HUMIDITY_SPINNER.value).visible = True
+        status = Status(status="",
+                        spinner="bouncingBall",
+                        spinner_style="bold dark_goldenrod")
+        layout.get(Layouts.TEMPERATURE_SPINNER.value).update(
+            Align.center(status, vertical="middle")
+        )
+        layout.get(Layouts.HUMIDITY_SPINNER.value).update(
+            Align.center(status, vertical="middle")
+        )
+        self._get_new_timeline_data()
+        layout.get(Layouts.TEMPERATURE_SPINNER.value).visible = False
+        layout.get(Layouts.HUMIDITY_SPINNER.value).visible = False
+        layout.get(Layouts.TEMPERATURE_TIMELINE.value).visible = True
+        layout.get(Layouts.HUMIDITY_TIMELINE.value).visible = True
+        self._render_timeline_data()
 
     def _go_back(self):
         """Goes back to dashboard"""
@@ -174,17 +217,17 @@ class DetailState(State):
     def _handle_d(self):
         """Key handler, displays plot data aggregated by day"""
         self._context.interval = Intervals.DAY.value
-        self._render_details()
+        self._new_interval()
 
     def _handle_h(self):
         """Key handler, displays plot data aggregated by hour"""
         self._context.interval = Intervals.HOUR.value
-        self._render_details()
+        self._new_interval()
 
     def _handle_m(self):
         """Key handler, displays plot data aggregated by minute"""
         self._context.interval = Intervals.MINUTE.value
-        self._render_details()
+        self._new_interval()
 
     def _handle_q_mark(self):
         """Key handler, shows help screen"""
@@ -207,13 +250,12 @@ class DetailState(State):
         skip if coming from help screen"""
         if self._context.previous_state == "normal":
             self._clear_details()
-            self._refresh_details()
+            self._new_details()
 
     def _render_details(self):
         self._render_sensor_info()
         self._render_location_info()
-        self._render_temperature_timeline()
-        self._render_humidity_timeline()
+        self._render_timeline_data()
 
     def _render_humidity_timeline(self):
         """Creates humidity plot with current data and currently selected interval"""
@@ -279,19 +321,24 @@ class DetailState(State):
             elif self._context.interval ==Intervals.DAY.value:
                 layout.update(Align.center(Text("No daily temperature data"), vertical="middle"))
 
+    def _render_timeline_data(self):
+        self._render_temperature_timeline()
+        self._render_humidity_timeline()
+
     def _refresh_details(self):
         """Displays spinner while fetching new data"""
         layout = self._context.layout
-        layout.get(Layouts.SPINNER.value).visible = True
+        layout.get(Layouts.TOOLTIP_CONTENT.value).visible = False
+        layout.get(Layouts.TOOLTIP_SPINNER.value).visible = True
         status = Status(status="",
                         spinner="bouncingBall",
                         spinner_style="bold dark_goldenrod")
-        layout.get(Layouts.SPINNER.value).update(
+        layout.get(Layouts.TOOLTIP_SPINNER.value).update(
             Align.center(status, vertical="middle")
         )
         self._get_new_data()
-        layout.get(Layouts.SPINNER.value).visible = False
-        layout.get(Layouts.DETAIL.value).visible = True
+        layout.get(Layouts.TOOLTIP_SPINNER.value).visible = False
+        layout.get(Layouts.TOOLTIP_CONTENT.value).visible = True
         self._render_details()
 
     def _refresh_location_info(self, location_id: str) -> LocationInfo|None:

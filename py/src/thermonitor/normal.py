@@ -199,7 +199,7 @@ class NormalState(State):
         hint.add_column()
         hint.add_column()
         hint.add_row("(t)imeline", "(e)dit mode", "(m)ove mode")
-        hint.add_row("(p)ut state", "(u)nit", "(?)help")
+        hint.add_row("(?)help", "(u)nit", "(p)ut state to file")
         return Align.center(hint, vertical="middle")
 
     @staticmethod
