@@ -1,5 +1,5 @@
 package constants
 
 const (
-	TABLE_NAME = "Telemetry"
+	TABLE_NAME = "TelemetryOld"
 )
